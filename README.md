@@ -45,7 +45,7 @@ TBD
 - Dominic Paulazzo [wevexOP](https://github.com/wevexOP)
 - Troy Miller
 - James Inanoria
-- Kait Heinle
+- Kait Heinle [kait-kat]
 - Christian Areas
 
 
