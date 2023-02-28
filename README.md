@@ -45,7 +45,7 @@ TBD
 - Dominic Paulazzo
 - Troy Miller
 - ArvinJames Inanoria
-- Kait Heinle
+- Kait Heinle (kait-kat)
 - Christian Areas
 
 
