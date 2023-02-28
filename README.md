@@ -44,7 +44,7 @@ TBD
 - Michael Virga
 - Dominic Paulazzo [wevexOP](https://github.com/wevexOP)
 - Troy Miller
-- ArvinJames Inanoria
+- James Inanoria
 - Kait Heinle
 - Christian Areas
 
