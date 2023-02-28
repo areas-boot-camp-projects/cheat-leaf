@@ -46,7 +46,7 @@ TBD
 - Troy Miller [R0x0s](https://github.com/R0x0s)
 - James Inanoria
 - Kait Heinle [kait-kat](https://github.com/kait-kat)
-- Christian Areas
+- Christian Areas ([christianareas](https://github.com/christianareas))
 
 
 ## License
