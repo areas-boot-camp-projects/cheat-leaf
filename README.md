@@ -43,7 +43,7 @@ TBD
 ## Credits
 - Michael Virga
 - Dominic Paulazzo [wevexOP](https://github.com/wevexOP)
-- Troy Miller
+- Troy Miller [R0x0s](https://github.com/R0x0s)
 - James Inanoria
 - Kait Heinle [kait-kat](https://github.com/kait-kat)
 - Christian Areas
