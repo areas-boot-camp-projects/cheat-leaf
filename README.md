@@ -46,7 +46,7 @@ TBD
 - Troy Miller
 - James Inanoria
 - Kait Heinle
-- Christian Areas
+- Christian Areas ([christianareas](https://github.com/christianareas))
 
 
 ## License
