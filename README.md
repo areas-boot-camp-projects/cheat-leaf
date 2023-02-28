@@ -42,7 +42,7 @@ TBD
 
 ## Credits
 - Michael Virga
-- Dominic Paulazzo
+- Dominic Paulazzo [wevexOP](https://github.com/wevexOP)
 - Troy Miller
 - ArvinJames Inanoria
 - Kait Heinle
