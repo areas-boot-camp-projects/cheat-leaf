@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/areas-boot-camp-projects/cheat-leaf/issues"
   },
-  "homepage": "https://github.com/areas-boot-camp-projects/cheat-leaf#readme"
+  "homepage": "https://github.com/areas-boot-camp-projects/cheat-leaf#readme",
+  "dependencies": {
+    "react-router-dom": "^6.8.2"
+  }
 }
