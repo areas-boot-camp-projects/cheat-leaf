@@ -16,6 +16,7 @@ function App() {
 
   return (
     <div>
+      <Nav/>
 
     {(typeof backendData.users === 'undefined') ? (
       <p>Loading...</p>
