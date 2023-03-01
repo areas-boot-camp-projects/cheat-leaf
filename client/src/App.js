@@ -1,6 +1,5 @@
-import React from "react";
-import Navbar from "./nav/Navbar.js";
-import Home from "./pages/Home";
+import React from "react"
+import Home from "./pages/Home"
 import About from "./pages/About"
 import Login from "./pages/Login"
 
@@ -26,7 +25,6 @@ function App() {
       <Home />
       <About />
       <Login />
-      <Navbar />
       <Users />
     </ApolloProvider>
   )
