@@ -22,9 +22,16 @@ function App() {
     
     <div>
 
+
         <Home />
         <About />
         <Login />
+
+      <Nav/>
+
+
+        <Navbar />
+
 
     {(typeof backendData.users === 'undefined') ? (
       <p>Loading...</p>
