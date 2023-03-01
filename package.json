@@ -1,0 +1,26 @@
+{
+  "name": "cheat-leaf-1",
+  "version": "1.0.0",
+  "description": "A clean, well-designed cheat-sheet, web platform that hosts data related to code blocks and other information. It’s an all-around good resource for finding unique data sets to help you get ahead.",
+  "main": "server.js",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "scripts": {
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/areas-boot-camp-projects/cheat-leaf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/areas-boot-camp-projects/cheat-leaf/issues"
+  },
+  "homepage": "https://github.com/areas-boot-camp-projects/cheat-leaf#readme"
+}
