@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 // Test route.
-app.get("/api", (req,res) => {
+app.get("/", (req,res) => {
     res.json({"users": ["userOne", "userTwo", "userThree"]})
 });
 

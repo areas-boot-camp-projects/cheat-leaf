@@ -1,5 +1,8 @@
-// React.
-import React from "react"
+import React from "react";
+import Navbar from "./nav/Navbar.js";
+import Home from "./pages/Home";
+import About from "./pages/About"
+import Login from "./pages/Login"
 
 // Import the Apollo client.
 import {
@@ -18,10 +21,12 @@ const client = new ApolloClient({
 })
 
 function App() {
-
   return (
     <ApolloProvider client={client}>
-      {/* This is just here to test the connection between the front and back end. */}
+      <Home />
+      <About />
+      <Login />
+      <Navbar />
       <Users />
     </ApolloProvider>
   )
