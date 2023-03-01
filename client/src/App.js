@@ -1,48 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Navbar from "./nav/Navbar.js";
 import Home from "./pages/Home";
 import About from "./pages/About"
 import Login from "./pages/Login"
 
+// Import the Apollo client.
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+} from "@apollo/client"
+
+// Child components.
+import Users from "./components/Users"
+
+// Create the Apollo client.
+const client = new ApolloClient({
+  uri: "/graphql",
+  cache: new InMemoryCache(),
+})
+
 function App() {
-
-  const [backendData, setBackendData] = useState([{}])
-
-  useEffect(() => {
-    fetch("/").then(
-      response => response.json()
-    ).then(
-      data => {
-        setBackendData(data)
-      }
-    )
-  }, [])
-
   return (
-    
-    <div>
-
-
-        <Home />
-        <About />
-        <Login />
-
-      <Nav/>
-
-
-        <Navbar />
-
-
-    {(typeof backendData.users === 'undefined') ? (
-      <p>Loading...</p>
-    ): (
-      backendData.users.map((user, i) => (
-        <p key={i}>{user}</p>
-      ))
-    )
-    }
-
-    </div>
+    <ApolloProvider client={client}>
+      <Home />
+      <About />
+      <Login />
+      <Navbar />
+      <Users />
+    </ApolloProvider>
   )
 }
 
