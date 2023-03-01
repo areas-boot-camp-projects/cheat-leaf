@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./nav/Navbar.js";
+import Home from "./pages/Home";
+import About from "./pages/About"
+import Login from "./pages/Login"
 
 function App() {
 
   const [backendData, setBackendData] = useState([{}])
 
   useEffect(() => {
-    fetch("/api").then(
+    fetch("/").then(
       response => response.json()
     ).then(
       data => {
@@ -18,7 +21,11 @@ function App() {
   return (
     
     <div>
-        <Navbar />
+
+        <Home />
+        <About />
+        <Login />
+
     {(typeof backendData.users === 'undefined') ? (
       <p>Loading...</p>
     ): (
