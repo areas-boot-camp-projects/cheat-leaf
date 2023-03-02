@@ -10,14 +10,23 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Login from '../pages/Login';
 import MyProfile from '../pages/MyProfile';
+import logo from '../media/cheatleaflogo.png';
 
 export default class Navigation extends Component {
     render() {
         return (
             <Router>
-            <Navbar bg="light" expand="lg">
-              <Container fluid>
-                <Navbar.Brand as={Link} to={"/Home"}>Cheat Leaf</Navbar.Brand>
+            <Navbar className="nav-color" expand="lg">
+              <Container fluid >
+                <Navbar.Brand as={Link} to={"/Home"}>
+                  <img
+                    src={logo}
+                    width="70"
+                    height="30"
+                    className="d-inline-block align-top"
+                    alt="React Bootstrap logo"
+                  />
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                   <Nav
