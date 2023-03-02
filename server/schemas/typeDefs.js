@@ -15,6 +15,7 @@ const typeDefs = gql`
 	type Leaf {
 		_id: ID!
 		ownerId: User!
+		ownerUsername: String!
 		title: String!
 		content: String!
 		createdAtFormatted: String!
@@ -41,7 +42,6 @@ const typeDefs = gql`
 
 	type Mutation {
 		addLeaf(
-			ownerId: ID!,
 			ownerUsername: String!,
 			title: String!,
 			content: String!,
