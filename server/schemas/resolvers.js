@@ -1,8 +1,10 @@
 // Models.
 const { User, Leaf } = require("../models")
 
-// Resolvers.
+// Middleware.
 // ** todo: add validation / error handling (as middleware). **
+
+// Resolvers.
 const resolvers = {
 	Query: {
 		users: async () => {
