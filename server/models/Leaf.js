@@ -4,9 +4,14 @@ const { Schema, model } = require("mongoose")
 // Schema.
 const leafSchema = new Schema(
 	{
-		owner: {
+		ownerId: {
 			type: Schema.Types.ObjectId,
 			ref: "User",
+			required: true,
+		},
+		ownerUsername: {
+			type: String,
+			required: true,
 		},
 		title: {
 			type: String,
