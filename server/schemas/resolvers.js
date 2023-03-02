@@ -5,6 +5,7 @@ const { User, Leaf } = require("../models")
 // ** todo: add validation / error handling (as middleware). **
 
 // Resolvers.
+// ** todo: add try/catch blocks to better catch errors. **
 const resolvers = {
 	Query: {
 		users: async () => {

@@ -1,6 +1,8 @@
 // Dependencies.
 const { Schema, model } = require("mongoose")
 
+// ** todo: add bcrypt. **
+
 // Schema.
 const userSchema = new Schema(
 	{
