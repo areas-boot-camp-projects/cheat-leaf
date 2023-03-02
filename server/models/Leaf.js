@@ -32,6 +32,28 @@ const leafSchema = new Schema(
 	},
 )
 
+// Format createdAt.
+leafSchema
+	.virtual("createdAtFormatted")
+	.get(function () {
+		return new Intl.DateTimeFormat("en-US", {
+			dateStyle: "medium",
+			timeStyle: "short",
+		})
+			.format(this.createdAt)
+	})
+
+// Format updatedAt.
+leafSchema
+	.virtual("updatedAtFormatted")
+	.get(function () {
+		return new Intl.DateTimeFormat("en-US", {
+			dateStyle: "medium",
+			timeStyle: "short",
+		})
+			.format(this.updatedAt)
+	})
+
 // Model.
 const Leaf = model("Leaf", leafSchema)
 

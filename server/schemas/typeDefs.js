@@ -6,6 +6,8 @@ const typeDefs = gql`
 		_id: ID!
 		username: String!
 		email: String!
+		createdAtFormatted: String!
+		updatedAtFormatted: String!
 		leafs: [Leaf]!
 		leafCount: Int
 	}
@@ -15,6 +17,8 @@ const typeDefs = gql`
 		ownerId: User!
 		title: String!
 		content: String!
+		createdAtFormatted: String!
+		updatedAtFormatted: String!
 	}
 
 	type Query {
