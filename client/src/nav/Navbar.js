@@ -41,7 +41,7 @@ export default class Navigation extends Component {
                       My Profile
                     </Nav.Link>
                   </Nav>
-                  <Form className="d-flex">
+                  <Form className="d-flex ml-auto">
                     <Form.Control
                       type="search"
                       placeholder="Search"
