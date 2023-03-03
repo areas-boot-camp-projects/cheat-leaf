@@ -10,7 +10,9 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Login from '../pages/Login';
 import MyProfile from '../pages/MyProfile';
+import SignUp from '../pages/Signup';
 import logo from '../media/cheatleaflogo.png';
+
 
 export default class Navigation extends Component {
     render() {
@@ -38,19 +40,21 @@ export default class Navigation extends Component {
                     <Nav.Link as={Link} to={"/About"}>About</Nav.Link>
                     <NavDropdown title="Login" id="navbarScrollingDropdown">
                       <NavDropdown.Item as={Link} to={"/Login"}>Login</NavDropdown.Item>
-                      <NavDropdown.Item as={Link} to={"/#"}>
-                        Register
+                      <NavDropdown.Item as={Link} to={"/SignUp"}>
+                        Sign Up
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
                       <NavDropdown.Item as={Link} to={"/#"}>
                         Sign Out
                       </NavDropdown.Item>
+                      <NavDropdown.Divider />
+                      <NavDropdown.Item as={Link} to={"/MyProfile"}>
+                        My Profile
+                      </NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link as={Link} to={"/MyProfile"}>
-                      My Profile
-                    </Nav.Link>
                   </Nav>
-                  <Form className="d-flex">
+                  <Form className="d-flex"
+                        style={{ alignItems: 'center'}}>
                     <Form.Control
                       type="search"
                       placeholder="Search"
@@ -75,6 +79,9 @@ export default class Navigation extends Component {
                 </Route>
                 <Route path="/MyProfile">
                         <MyProfile />
+                </Route>
+                <Route path="/SignUp">
+                        <SignUp />
                 </Route>
                 </Switch>
             </div>
