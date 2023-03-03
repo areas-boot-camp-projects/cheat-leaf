@@ -6,21 +6,15 @@ import {
     Route,
     Link
 } from 'react-router-dom'
-import Home from '../pages/Home';
-import About from '../pages/About';
-import Login from '../pages/Login';
-import MyProfile from '../pages/MyProfile';
-import SignUp from '../pages/Signup';
 import logo from '../media/cheatleaflogo.png';
 
 
 export default class Navigation extends Component {
     render() {
         return (
-            <Router>
             <Navbar className="nav-color" expand="lg">
               <Container fluid>
-                <Navbar.Brand as={Link} to={"/Home"}>
+                <Navbar.Brand as={Link} to={"/"}>
                   <img
                     src={logo}
                     width="70"
@@ -36,7 +30,7 @@ export default class Navigation extends Component {
                     style={{ maxHeight: '100px' }}
                     navbarScroll
                   >
-                    <Nav.Link as={Link} to={"/Home"}>Home</Nav.Link>
+                    <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
                     <Nav.Link as={Link} to={"/About"}>About</Nav.Link>
                   </Nav>
                  
@@ -57,26 +51,6 @@ export default class Navigation extends Component {
                 </Navbar.Collapse>
               </Container>
             </Navbar>
-            <div>
-                <Switch>
-                <Route path="/Home">
-                        <Home />
-                </Route>
-                <Route path="/About">
-                        <About />
-                </Route>
-                <Route path="/Login">
-                        <Login />
-                </Route>
-                <Route path="/MyProfile">
-                        <MyProfile />
-                </Route>
-                <Route path="/SignUp">
-                        <SignUp />
-                </Route>
-                </Switch>
-            </div>
-            </Router>
           );
         }
     }
