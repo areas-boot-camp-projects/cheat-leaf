@@ -1,12 +1,10 @@
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
-import video from '../media/forest.mp4';
-
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import backgroundImage from '../media/forestimg.jpg';
 
 
 export default function Home() {
@@ -24,18 +22,19 @@ export default function Home() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          backgroundImage: "url('./src/assets/forestbackground.jpg')",
+          backgroundPosition: 'center',
+          backgroundImage: "url(" + backgroundImage + ")",
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           minHeight: '100vh',
-          padding: '40px'
+          padding: '10px',
+         
         }}>
-          <h1>Explore the Forest</h1>
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
+          <h1 style={{marginTop: '50px' }}>Explore the Forest</h1>
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '40px', }}>
             <input className="rounded-pill" type="text" placeholder="Search" style={{ width: '50%', marginRight: '10px' }} />
-            <button className="rounded-pill">Create New Post</button>
+            <button className="rounded mb-0">Create New Post</button>
           </div>
-          <p >The Forest:</p>
           <div style={{ 
             display: 'flex',
             flexDirection: 'column',
@@ -45,10 +44,11 @@ export default function Home() {
           }}>
            {posts.map(post => (
                  <div key={post.id} style={{ 
-                     marginBottom: '20px', 
+                    marginBottom: '20px', 
                     width: '100%', 
                     boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)', 
-                    borderRadius: '5px', 
+                    backgroundColor: 'white',
+                    borderRadius: '1rem', 
                     padding: '20px', 
                     display: 'flex',
                     alignItems: 'center'
@@ -65,7 +65,7 @@ export default function Home() {
                         Posted by {post.username}USERNAME HERE at TIME HERE{post.time}
                      </p>
 
-                    <button style={{ marginTop: '10px', marginRight: '10px' }}>Comment</button>
+                    <button className="rounded mb-0" style={{ marginTop: '10px', marginRight: '10px' }}>Comment</button>
                     </div>
                  </div>
                 ))}
