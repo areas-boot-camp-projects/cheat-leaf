@@ -5,6 +5,8 @@ import Login from "./pages/Login"
 import Navbar from './nav/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { Route } from 'react-router-dom'
+
 
 
 // Import the Apollo client.
@@ -27,6 +29,8 @@ function App() {
   return (
     <ApolloProvider client={client}> 
       <Navbar />
+      <Route path="/" exact component={Home} />
+
 
       
     </ApolloProvider>
