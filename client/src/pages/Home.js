@@ -9,7 +9,7 @@ export default function Home() {
         <Row>
             <Col>
             <div class="embed-responsive embed-responsive-16by9">
-                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                <video className="home-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
                     <source src={video} type="video/mp4"/>
                 </video>
             </div>

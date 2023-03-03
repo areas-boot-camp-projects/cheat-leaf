@@ -17,6 +17,15 @@ code {
   text-shadow: 4px 4px 8px #000000;
 }
 
+.home-video {
+  width: 100px;
+}
+
 .nav-color {
   background-color: #6bb060 !important;
 }
+
+.search-bar {
+  width: 350px !important;
+}
+

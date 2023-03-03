@@ -50,11 +50,11 @@ export default class Navigation extends Component {
                       My Profile
                     </Nav.Link>
                   </Nav>
-                  <Form className="d-flex">
+                  <Form className="d-flex search-bar">
                     <Form.Control
                       type="search"
-                      placeholder="Search"
-                      className="me-2"
+                      placeholder="Search the forest of ideas... "
+                      className=" we-2 rounded-pill search-bar"
                       aria-label="Search"
                     />
                     <Button variant="outline-success">Search</Button>
