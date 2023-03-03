@@ -1,5 +1,6 @@
 import React from "react";
 import { Redirect, Switch, Route, Router } from "react-router-dom";
+import RouteGuard from "./middleware/RouteGuard"
  
 
 import { history } from './helpers/history';
@@ -12,7 +13,7 @@ function Routes() {
    return (
        <Router history={history}>
            <Switch>
-               <Route
+               <RouteGuard
                    exact
                    path="/"
                    component={HomePage}

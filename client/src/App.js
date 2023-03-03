@@ -5,7 +5,9 @@ import Login from "./pages/Login"
 import Navbar from './nav/Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
+import axios from 'axios';
+import Routers from './routes'
+import { setAuthToken } from "./helpers/setAuthToken"
 
 // Import the Apollo client.
 import {

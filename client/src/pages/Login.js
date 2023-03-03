@@ -1,8 +1,9 @@
 import React from 'react'
 import { Button, Form, FormGroup, Label, Input } from 'react-bootstrap'
+import axios from 'axios';
 
 
-export default function Login() {
+ function Login() {
         return (
             <Form style={{width:"80%", marginLeft:"10%", marginTop:"10%"}} >
                 <Form.Group >
@@ -17,3 +18,25 @@ export default function Login() {
             </Form>
         )
     }
+
+    const handleSubmit = (email, password) => {
+        const loginPayload = {
+            email: ' ',
+            password: ' '
+        }
+    
+        axios.post("", loginPayload)
+            .then(response => {
+            const token = response.data.token;
+        
+            localStorage.setItem("token", token);
+
+            setAuthToken(token);
+
+            window.location.href = '/'
+
+        })
+        .catch(err => console.log(err));
+    };
+
+    export default Login
