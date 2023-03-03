@@ -25,6 +25,17 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 })
 
+const token = localStorage.getItem("token");
+if (token) {
+    setAuthToken(token);
+}
+
+return (
+  <div className="App">
+    <Routers/>
+  </div>
+);
+
 function App() {
   return (
     <ApolloProvider client={client}> 
@@ -32,6 +43,6 @@ function App() {
       
     </ApolloProvider>
   )
-}
+}  
 
-export default App
+export default App;
