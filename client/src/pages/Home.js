@@ -32,10 +32,10 @@ export default function Home() {
         }}>
           <h1>Explore the Forest</h1>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
-            <input type="text" placeholder="Search" style={{ width: '50%', marginRight: '10px' }} />
-            <button>Create New Post</button>
+            <input className="rounded-pill" type="text" placeholder="Search" style={{ width: '50%', marginRight: '10px' }} />
+            <button className="rounded-pill">Create New Post</button>
           </div>
-          <p>The Forest:</p>
+          <p >The Forest:</p>
           <div style={{ 
             display: 'flex',
             flexDirection: 'column',

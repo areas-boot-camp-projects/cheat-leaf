@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/areas-boot-camp-projects/cheat-leaf#readme",
   "dependencies": {
+    "mdb-react-ui-kit": "^5.1.0",
     "react-router-dom": "^5.3.4"
   }
 }
