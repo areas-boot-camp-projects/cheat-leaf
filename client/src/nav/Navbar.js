@@ -39,17 +39,7 @@ export default class Navigation extends Component {
                     <Nav.Link as={Link} to={"/Home"}>Home</Nav.Link>
                     <Nav.Link as={Link} to={"/About"}>About</Nav.Link>
                   </Nav>
-                  <Form className="d-flex ml-5 mr-5 w-50"
-                        style={{ alignItems: 'center'}}>
-
-                    <Form.Control
-                      type="search"
-                      placeholder="Search"
-                      className="me-2 rounded-pill"
-                      aria-label="Search"
-                    />
-                    <Button>Search</Button>
-                  </Form>
+                 
                   <NavDropdown title="Login" id="navbarScrollingDropdown">
                       <NavDropdown.Item as={Link} to={"/Login"}>Login</NavDropdown.Item>
                       <NavDropdown.Item as={Link} to={"/SignUp"}>
