@@ -19,7 +19,7 @@ export default class Navigation extends Component {
         return (
             <Router>
             <Navbar className="nav-color" expand="lg">
-              <Container fluid >
+              <Container fluid>
                 <Navbar.Brand as={Link} to={"/Home"}>
                   <img
                     src={logo}
@@ -30,7 +30,7 @@ export default class Navigation extends Component {
                   />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar.Collapse id="navbarScroll">
+                <Navbar.Collapse className='justify-content-center' id="navbarScroll">
                   <Nav
                     className="me-auto my-2 my-lg-0"
                     style={{ maxHeight: '100px' }}
@@ -38,6 +38,13 @@ export default class Navigation extends Component {
                   >
                     <Nav.Link as={Link} to={"/Home"}>Home</Nav.Link>
                     <Nav.Link as={Link} to={"/About"}>About</Nav.Link>
+
+                    <Nav.Link as={Link} to={"/MyProfile"}>
+                      My Profile
+                    </Nav.Link>
+                  </Nav>
+                  <Form className="d-flex ml-5 mr-5">
+
                     <NavDropdown title="Login" id="navbarScrollingDropdown">
                       <NavDropdown.Item as={Link} to={"/Login"}>Login</NavDropdown.Item>
                       <NavDropdown.Item as={Link} to={"/SignUp"}>
@@ -55,6 +62,7 @@ export default class Navigation extends Component {
                   </Nav>
                   <Form className="d-flex"
                         style={{ alignItems: 'center'}}>
+
                     <Form.Control
                       type="search"
                       placeholder="Search"
@@ -63,6 +71,16 @@ export default class Navigation extends Component {
                     />
                     <Button variant="outline-success">Search</Button>
                   </Form>
+                  <NavDropdown title="Login" id="navbarScrollingDropdown">
+                      <NavDropdown.Item as={Link} to={"/Login"}>Login</NavDropdown.Item>
+                      <NavDropdown.Item as={Link} to={"/#"}>
+                        Register
+                      </NavDropdown.Item>
+                      <NavDropdown.Divider />
+                      <NavDropdown.Item as={Link} to={"/#"}>
+                        Sign Out
+                      </NavDropdown.Item>
+                    </NavDropdown>
                 </Navbar.Collapse>
               </Container>
             </Navbar>
