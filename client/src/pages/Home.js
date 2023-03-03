@@ -3,6 +3,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import video from '../media/forest.mp4';
+
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
+
+
 export default function Home() {
    
     const posts = [
@@ -15,46 +21,84 @@ export default function Home() {
     
       return (
         <div style={{ 
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          backgroundImage: "url('https://cdn.pixabay.com/photo/2016/11/22/21/42/adventure-1851092_960_720.jpg')",
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          minHeight: '100vh',
+          padding: '40px'
+        }}>
+          <h1>Explore the Forest</h1>
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
+            <input type="text" placeholder="Search" style={{ width: '50%', marginRight: '10px' }} />
+            <button>Create New Post</button>
+          </div>
+          <p>The Forest:</p>
+          <div style={{ 
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            backgroundImage: "./assets/images/foretbackground.jpg)",
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            minHeight: '100vh',
-            padding: '40px'
+            width: '50%',
+            padding: '20px'
           }}>
-            <h1>Explore the Forest</h1>
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
-              <input type="text" placeholder="Search" style={{ width: '50%', marginRight: '10px' }} />
-              <button>Create New Post</button>
-            </div>
-            <p>The Forest:</p>
-            <div style={{ 
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              width: '100%',
-              padding: '20px'
-            }}>
-              {posts.map(post => (
-                <div key={post.id} style={{ 
-                  marginBottom: '20px', 
-                  width: '50%', 
-                  boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)', 
-                  borderRadius: '5px', 
-                  padding: '20px' 
-                }}>
-                  <h3 style={{ textAlign: 'center' }}>{post.title}</h3>
-                  <p>{post.content}</p>
-                </div>
-              ))}
-            </div>
+           {posts.map(post => (
+                 <div key={post.id} style={{ 
+                     marginBottom: '20px', 
+                    width: '100%', 
+                    boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)', 
+                    borderRadius: '5px', 
+                    padding: '20px', 
+                    display: 'flex',
+                    alignItems: 'center'
+                    }}>
+                    <div style={{ marginRight: '10px' }}>
+                    <FontAwesomeIcon icon={faArrowUp} style={{ color: 'green' }} />
+                    <p style={{ margin: '0', textAlign: 'center' }}>{post.upvotes}</p>
+                    <FontAwesomeIcon icon={faArrowDown} style={{ color: 'red' }} />
+                    </div>
+                <div style={{ flex: '1' }}>
+                    <h3 style={{ textAlign: 'center' }}>{post.title}</h3>
+                    <p>{post.content}</p>
+                    <button style={{ marginTop: '10px', marginRight: '10px' }}>Comment</button>
+                    </div>
+                 </div>
+                ))}
           </div>
-        );
-      }
-    
-    
+        </div>
+      );
+    }
+  /*
+    return (
+        <div className="home-page">
+          <div className="search-bar">
+            <input type="text" placeholder="Search" />
+            <button>Create New Post</button>
+          </div>
+          <div className="posts-container">
+            {posts.map(post => (
+              <div className="post-container" key={post.id}>
+                <div className="vote-buttons">
+                  <button className="vote-button upvote">
+                    <FontAwesomeIcon icon={faArrowUp} />
+                  </button>
+                  <button className="vote-button downvote">
+                    <FontAwesomeIcon icon={faArrowDown} />
+                  </button>
+                </div>
+                <div className="post-content">
+                  <h2>{post.title}</h2>
+                  <p>{post.content}</p>
+                  <button className="comment-button">Add Comment</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    }
+    */
     
     
     /*return ([
