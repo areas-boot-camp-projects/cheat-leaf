@@ -4,9 +4,14 @@ const { Schema, model } = require("mongoose")
 // Schema.
 const leafSchema = new Schema(
 	{
-		owner: {
+		ownerId: {
 			type: Schema.Types.ObjectId,
 			ref: "User",
+			required: true,
+		},
+		ownerUsername: {
+			type: String,
+			required: true,
 		},
 		title: {
 			type: String,
@@ -26,6 +31,28 @@ const leafSchema = new Schema(
 		id: false,
 	},
 )
+
+// Format createdAt.
+leafSchema
+	.virtual("createdAtFormatted")
+	.get(function () {
+		return new Intl.DateTimeFormat("en-US", {
+			dateStyle: "medium",
+			timeStyle: "short",
+		})
+			.format(this.createdAt)
+	})
+
+// Format updatedAt.
+leafSchema
+	.virtual("updatedAtFormatted")
+	.get(function () {
+		return new Intl.DateTimeFormat("en-US", {
+			dateStyle: "medium",
+			timeStyle: "short",
+		})
+			.format(this.updatedAt)
+	})
 
 // Model.
 const Leaf = model("Leaf", leafSchema)

@@ -6,22 +6,56 @@ const typeDefs = gql`
 		_id: ID!
 		username: String!
 		email: String!
+		createdAtFormatted: String!
+		updatedAtFormatted: String!
 		leafs: [Leaf]!
 		leafCount: Int
 	}
 
 	type Leaf {
 		_id: ID!
-		owner: User!
+		ownerId: User!
+		ownerUsername: String!
 		title: String!
 		content: String!
+		createdAtFormatted: String!
+		updatedAtFormatted: String!
 	}
 
 	type Query {
 		users: [User]
-		user(username: String!): User
-		userLeafs(username: String!): [Leaf]
-		leaf(_id: ID!): Leaf
+		
+		user(
+			username: String!
+		): User
+		
+		userLeafs(
+			username: String!
+		): [Leaf]
+		
+		leafs: [Leaf]
+		
+		leaf(
+			leafId: ID!
+		): Leaf
+	}
+
+	type Mutation {
+		addLeaf(
+			ownerUsername: String!,
+			title: String!,
+			content: String!,
+		): Leaf
+		
+		editLeaf(
+			leafId: ID!,
+			title: String!,
+			content: String!
+		): Leaf
+		
+		deleteLeaf(
+			leafId: ID!
+		): Leaf
 	}
 `
 
