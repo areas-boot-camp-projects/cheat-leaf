@@ -24,7 +24,7 @@ export default function Home() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          backgroundImage: "url('https://cdn.pixabay.com/photo/2016/11/22/21/42/adventure-1851092_960_720.jpg')",
+          backgroundImage: "url('./src/assets/forestbackground.jpg')",
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           minHeight: '100vh',
@@ -61,6 +61,10 @@ export default function Home() {
                 <div style={{ flex: '1' }}>
                     <h3 style={{ textAlign: 'center' }}>{post.title}</h3>
                     <p>{post.content}</p>
+                    <p style={{ margin: '0' }}>
+                        Posted by {post.username}USERNAME HERE at TIME HERE{post.time}
+                     </p>
+
                     <button style={{ marginTop: '10px', marginRight: '10px' }}>Comment</button>
                     </div>
                  </div>
@@ -69,36 +73,8 @@ export default function Home() {
         </div>
       );
     }
-  /*
-    return (
-        <div className="home-page">
-          <div className="search-bar">
-            <input type="text" placeholder="Search" />
-            <button>Create New Post</button>
-          </div>
-          <div className="posts-container">
-            {posts.map(post => (
-              <div className="post-container" key={post.id}>
-                <div className="vote-buttons">
-                  <button className="vote-button upvote">
-                    <FontAwesomeIcon icon={faArrowUp} />
-                  </button>
-                  <button className="vote-button downvote">
-                    <FontAwesomeIcon icon={faArrowDown} />
-                  </button>
-                </div>
-                <div className="post-content">
-                  <h2>{post.title}</h2>
-                  <p>{post.content}</p>
-                  <button className="comment-button">Add Comment</button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      );
-    }
-    */
+  
+
     
     
     /*return ([
