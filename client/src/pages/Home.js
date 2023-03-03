@@ -8,18 +8,18 @@ export default function Home() {
     <Container>
         <Row>
             <Col>
-            <div class="embed-responsive embed-responsive-16by9">
-                <video className="home-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                    <source src={video} type="video/mp4"/>
-                </video>
-            </div>
-            <div id="vidText" class="carousel-caption">
-                <h1 className="display-3">Cheat Leaf</h1>
-                <p className="lead mb-0">A forest of information with an emphasis on obtaining knowledge quickly</p>
-                <br></br>
-                <br></br>
-                <br></br>
-            </div>
+                <div class="mbed-responsive embed-responsive-16by9">
+                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                        <source src={video} type="video/mp4"  />
+                    </video>
+                </div>
+                <div id="vidText" class="carousel-caption">
+                    <h1 className="display-3">Cheat Leaf</h1>
+                    <p className="lead mb-0">A forest of information with an emphasis on obtaining knowledge quickly</p>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                </div>
             </Col>
         </Row>
     </Container>
