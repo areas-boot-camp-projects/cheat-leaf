@@ -38,29 +38,8 @@ export default class Navigation extends Component {
                   >
                     <Nav.Link as={Link} to={"/Home"}>Home</Nav.Link>
                     <Nav.Link as={Link} to={"/About"}>About</Nav.Link>
-
-                    <Nav.Link as={Link} to={"/MyProfile"}>
-                      My Profile
-                    </Nav.Link>
                   </Nav>
-                  <Form className="d-flex ml-5 mr-5">
-
-                    <NavDropdown title="Login" id="navbarScrollingDropdown">
-                      <NavDropdown.Item as={Link} to={"/Login"}>Login</NavDropdown.Item>
-                      <NavDropdown.Item as={Link} to={"/SignUp"}>
-                        Sign Up
-                      </NavDropdown.Item>
-                      <NavDropdown.Divider />
-                      <NavDropdown.Item as={Link} to={"/#"}>
-                        Sign Out
-                      </NavDropdown.Item>
-                      <NavDropdown.Divider />
-                      <NavDropdown.Item as={Link} to={"/MyProfile"}>
-                        My Profile
-                      </NavDropdown.Item>
-                    </NavDropdown>
-                  </Nav>
-                  <Form className="d-flex"
+                  <Form className="d-flex ml-5 mr-5 w-50"
                         style={{ alignItems: 'center'}}>
 
                     <Form.Control
@@ -73,12 +52,16 @@ export default class Navigation extends Component {
                   </Form>
                   <NavDropdown title="Login" id="navbarScrollingDropdown">
                       <NavDropdown.Item as={Link} to={"/Login"}>Login</NavDropdown.Item>
-                      <NavDropdown.Item as={Link} to={"/#"}>
-                        Register
+                      <NavDropdown.Item as={Link} to={"/SignUp"}>
+                        Sign Up
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
                       <NavDropdown.Item as={Link} to={"/#"}>
                         Sign Out
+                      </NavDropdown.Item>
+                      <NavDropdown.Divider />
+                      <NavDropdown.Item as={Link} to={"/MyProfile"}>
+                        My Profile
                       </NavDropdown.Item>
                     </NavDropdown>
                 </Navbar.Collapse>
