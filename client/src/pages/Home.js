@@ -8,7 +8,7 @@ export default function Home() {
     <Container>
         <Row>
             <Col>
-                <div class="mbed-responsive embed-responsive-16by9">
+                <div class="embed-responsive embed-responsive-16by9">
                     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
                         <source src={video} type="video/mp4"  />
                     </video>
