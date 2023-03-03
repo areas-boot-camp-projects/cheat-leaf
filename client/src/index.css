@@ -20,3 +20,8 @@ code {
 .nav-color {
   background-color: #6bb060 !important;
 }
+
+.search-bar {
+  width: 350px !important;
+}
+
