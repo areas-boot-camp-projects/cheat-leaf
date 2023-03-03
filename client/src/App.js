@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Navbar from "./nav/Navbar.js";
 
 function App() {
 
@@ -15,8 +16,13 @@ function App() {
   }, [])
 
   return (
+    
     <div>
+
       <Nav/>
+
+
+        <Navbar />
 
     {(typeof backendData.users === 'undefined') ? (
       <p>Loading...</p>
