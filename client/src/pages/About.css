@@ -1,0 +1,34 @@
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  
+  .about-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .about-header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .about-content {
+    margin-top: 50px;
+  }
+  
+  .about-content h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #555;
+  }
+  
