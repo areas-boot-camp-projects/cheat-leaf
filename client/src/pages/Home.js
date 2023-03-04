@@ -14,7 +14,8 @@ export default function Home() {
         { id: 2, title: 'Add static background.', content: 'I attempted to add a background to this homepage but either my pathing to the assets foler is incorrect in the inner css below. I think the image I added to assests with a gradient over it would look grear for a start.' },
         { id: 3, title: 'Getting Login/Sign up Backend Working', content: 'Setting up the login/sign up backend to register for the website.' },
         { id: 4, title: 'Setup the "About" page', content: 'We will still need to setup the about page. The "About" page should have the same static background as the home page.' },
-        { id: 5, title: 'TROY ADD THE FOOTER AND PROFILE PLZ', content: 'Add the footer and my profile page to the project so our backend team can get those working with user input aas well.' },
+        { id: 5, title: 'TROY ADD THE FOOTER AND PROFILE PLZ', content: 'Add the footer and my profile page to the project so our backend team can get those working with user input aas well.' }, 
+        
       ];
     
       return (
@@ -22,7 +23,7 @@ export default function Home() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          backgroundPosition: 'center',
+          backgroundPosition: 'static',
           backgroundImage: "url(" + backgroundImage + ")",
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
@@ -58,6 +59,7 @@ export default function Home() {
                     boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)', 
                     backgroundColor: '#F4F1E6',                    
                     borderRadius: '1rem', 
+                    fontFamily: 'Roboto',
                     padding: '20px', 
                     display: 'flex',
                     alignItems: 'center',
