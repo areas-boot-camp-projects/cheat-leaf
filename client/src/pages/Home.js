@@ -29,6 +29,7 @@ export default function Home() {
           minHeight: '100vh',
           minWidth: '100vw',
           padding: '10px',
+          overFlow: 'hidden'
         }}>
           <h1 className='homepage-text' style={{marginTop: '50px', marginBottom: '50px', color: '#B5A478'}}>Explore the Forest</h1>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px', }}>
@@ -39,21 +40,30 @@ export default function Home() {
           </div>
           <div style={{ 
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: 'row',
             alignItems: 'center',
-            width: '50%',
-            padding: '20px'
+            width: '90%',
+            padding: '10px',
+            flexWrap: 'wrap',
+            flexShrink: '0',
+            flexBasis: '400px',
           }}>
            {posts.map(post => (
                  <div key={post.id} style={{ 
-                    marginBottom: '20px', 
+                    marginBottom: '90px', 
                     width: '100%', 
+                    /*alignSelf: 'stretch', */
+                    flexWrap: 'wrap',
+                    flexShrink: '0',
+                    flexBasis: '400px',
                     boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)', 
                     backgroundColor: '#F4F1E6',                    
                     borderRadius: '1rem', 
                     padding: '20px', 
                     display: 'flex',
-                    alignItems: 'center'
+                    alignItems: 'center',
+                    margin: '10px',
+                    
                     }}>
                     <div style={{ marginRight: '10px' }}>
                     <FontAwesomeIcon icon={faArrowUp} style={{ color: 'green' }} />
