@@ -10,16 +10,27 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Login from '../pages/Login';
 import MyProfile from '../pages/MyProfile';
+import SignUp from '../pages/Signup';
+import logo from '../media/cheatleaflogo.png';
+
 
 export default class Navigation extends Component {
     render() {
         return (
             <Router>
-            <Navbar bg="light" expand="lg">
+            <Navbar className="nav-color" expand="lg">
               <Container fluid>
-                <Navbar.Brand as={Link} to={"/Home"}>Cheat Leaf</Navbar.Brand>
+                <Navbar.Brand as={Link} to={"/Home"}>
+                  <img
+                    src={logo}
+                    width="70"
+                    height="30"
+                    className="d-inline-block align-top"
+                    alt="React Bootstrap logo"
+                  />
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar.Collapse id="navbarScroll">
+                <Navbar.Collapse className='justify-content-center' id="navbarScroll">
                   <Nav
                     className="me-auto my-2 my-lg-0"
                     style={{ maxHeight: '100px' }}
@@ -27,29 +38,22 @@ export default class Navigation extends Component {
                   >
                     <Nav.Link as={Link} to={"/Home"}>Home</Nav.Link>
                     <Nav.Link as={Link} to={"/About"}>About</Nav.Link>
-                    <NavDropdown title="Login" id="navbarScrollingDropdown">
+                  </Nav>
+                 
+                  <NavDropdown title="Login" id="navbarScrollingDropdown">
                       <NavDropdown.Item as={Link} to={"/Login"}>Login</NavDropdown.Item>
-                      <NavDropdown.Item as={Link} to={"/#"}>
-                        Register
+                      <NavDropdown.Item as={Link} to={"/SignUp"}>
+                        Sign Up
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
                       <NavDropdown.Item as={Link} to={"/#"}>
                         Sign Out
                       </NavDropdown.Item>
+                      <NavDropdown.Divider />
+                      <NavDropdown.Item as={Link} to={"/MyProfile"}>
+                        My Profile
+                      </NavDropdown.Item>
                     </NavDropdown>
-                    <Nav.Link as={Link} to={"/MyProfile"}>
-                      My Profile
-                    </Nav.Link>
-                  </Nav>
-                  <Form className="d-flex ml-auto">
-                    <Form.Control
-                      type="search"
-                      placeholder="Search"
-                      className="me-2"
-                      aria-label="Search"
-                    />
-                    <Button variant="outline-success">Search</Button>
-                  </Form>
                 </Navbar.Collapse>
               </Container>
             </Navbar>
@@ -66,6 +70,9 @@ export default class Navigation extends Component {
                 </Route>
                 <Route path="/MyProfile">
                         <MyProfile />
+                </Route>
+                <Route path="/SignUp">
+                        <SignUp />
                 </Route>
                 </Switch>
             </div>

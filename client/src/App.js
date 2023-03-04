@@ -1,9 +1,11 @@
 import React from "react"
 import Home from "./pages/Home"
-import About from "./pages/About"
+import About from './pages/About'
 import Login from "./pages/Login"
-import Navbar from './nav/Navbar'
+import Navbar from './nav/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import { Route } from 'react-router-dom'
 
 import axios from 'axios';
 import Routers from './routes'
@@ -40,6 +42,9 @@ function App() {
   return (
     <ApolloProvider client={client}> 
       <Navbar />
+      <Route path="/" exact component={Home} />
+
+
       
     </ApolloProvider>
   )
