@@ -28,10 +28,9 @@ export default function Home() {
           backgroundSize: 'cover',
           minHeight: '100vh',
           minWidth: '100vw',
-          padding: '10px',
-          overFlow: 'hidden'
-        }}>
-          <h1 className='homepage-text' style={{marginTop: '50px', marginBottom: '50px', color: '#B5A478'}}>Explore the Forest</h1>
+          padding: '10px'
+          }}>
+          <h1 className='homepage-text text-center' xs='auto' style={{marginTop: '50px', marginBottom: '50px', color: '#B5A478'}}>Explore the Forest</h1>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px', }}>
             <input className="rounded-pill search-bar" type="text" placeholder="Search" style={{ width: '300px', color: '#d4cbb2'}} />
           </div>
