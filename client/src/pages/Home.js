@@ -27,13 +27,15 @@ export default function Home() {
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           minHeight: '100vh',
+          minWidth: '100vw',
           padding: '10px',
-         
         }}>
-          <h1 style={{marginTop: '50px' }}>Explore the Forest</h1>
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '40px', }}>
-            <input className="rounded-pill" type="text" placeholder="Search" style={{ width: '50%', marginRight: '10px' }} />
-            <button className="rounded mb-0">Create New Post</button>
+          <h1 className='homepage-text' style={{marginTop: '50px', marginBottom: '50px', color: '#B5A478'}}>Explore the Forest</h1>
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px', }}>
+            <input className="rounded-pill search-bar" type="text" placeholder="Search" style={{ width: '300px', color: '#d4cbb2'}} />
+          </div>
+          <div>
+          <button style={{marginBottom: '60px'}} className="rounded-pill newleaf-bttn">Grow New Leaf</button>
           </div>
           <div style={{ 
             display: 'flex',
@@ -47,7 +49,7 @@ export default function Home() {
                     marginBottom: '20px', 
                     width: '100%', 
                     boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)', 
-                    backgroundColor: 'white',
+                    backgroundColor: '#F4F1E6',                    
                     borderRadius: '1rem', 
                     padding: '20px', 
                     display: 'flex',
