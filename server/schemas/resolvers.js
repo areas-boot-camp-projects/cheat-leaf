@@ -1,5 +1,6 @@
 // Models.
 const { User, Leaf } = require("../models")
+const { findOne } = require("../models/User")
 
 // Middleware.
 // ** todo: add validation / error handling (as middleware). **
@@ -31,6 +32,29 @@ const resolvers = {
 	},
 
 	Mutation: {
+		signUpUser: async (parent, { username, email, password }) => {
+			// Create the user.
+			const addedUser = await User.create({
+				username,
+				email,
+				password,
+			})
+			return addedUser
+		},
+		signInUser: async (parent, { username, email, password }) => {
+			let user
+			// If there’s a username, use it to find the user.
+			if (username) {
+				user = await User.findOne({ username })
+			}
+			// If there’s an email, use it to find the user.
+			if (email) {
+				user = await User.findOne({ email })
+			}
+			// If there’s a user, validate the password.
+			const validatedPassword = await user.validatePassword(password)
+			return validatedPassword ? user : null
+		},
 		addLeaf: async (parent, { ownerUsername, title, content }) => {
 			// Get the owner by their username.
 			const user = await User.findOne({ username: ownerUsername })
