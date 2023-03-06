@@ -32,7 +32,7 @@ import React from 'react';
 import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import backgroundImage from '../media/forestimghalf.jpg';
 
-export default function App() {
+export default function About() {
   return (
      <MDBContainer fluid className='vh-100' style={{backgroundColor: '#F4F1E6'}}>
       <MDBRow style={{overFlow: 'hidden'}}>
