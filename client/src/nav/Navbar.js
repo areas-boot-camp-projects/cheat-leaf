@@ -27,14 +27,14 @@ export default class Navigation extends Component {
                 <Navbar.Collapse className='justify-content-center' id="navbarScroll">
                   <Nav
                     className="me-auto my-2 my-lg-0"
-                    style={{ maxHeight: '100px' }}
+                    style={{ maxHeight: '100px'}}
                     navbarScroll
                   >
                     <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
                     <Nav.Link as={Link} to={"/About"}>About</Nav.Link>
                   </Nav>
                  
-                  <NavDropdown title="Login" id="navbarScrollingDropdown">
+                  <NavDropdown align='end' title="Login" id="navbarScrollingDropdown" flip>
                       <NavDropdown.Item as={Link} to={"/Login"}>Login</NavDropdown.Item>
                       <NavDropdown.Item as={Link} to={"/SignUp"}>
                         Sign Up

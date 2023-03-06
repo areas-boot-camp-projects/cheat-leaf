@@ -30,15 +30,17 @@ export default About; */
 
 import React from 'react';
 import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-import backgroundImage from '../media/forestimg.jpg';
+import backgroundImage from '../media/forestimghalf.jpg';
 
 export default function App() {
   return (
-    <MDBContainer style={{backgroundColor: '#F4F1E6'}}>
-      <MDBRow>
-        <MDBCol size='lg-8' style={{backgroundImage: "url(" + backgroundImage + ")",backgroundSize: 'cover', backgroundPosition: 'static',  }} >
-          <div className='aboutus-text' style={{color: '#B5A478'}}>
+     <MDBContainer fluid className='vh-100' style={{backgroundColor: '#F4F1E6'}}>
+      <MDBRow style={{overFlow: 'hidden'}}>
+        <MDBCol className='aboutus-img vh-100' size='lg-6' style={{backgroundImage: "url(" + backgroundImage + ")", backgroundSize: 'cover', backgroundPosition: 'static'}} >
+          <div className='aboutus-text d-flex align-items-center justify-content-center' style={{color: '#B5A478' }}>
+          <div className="d-flex align-items-center">
            About Us
+           </div>
           </div>
         </MDBCol>
         <MDBCol size='lg' style={{marginTop: '100px'}}>

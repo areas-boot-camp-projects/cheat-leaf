@@ -57,6 +57,7 @@ code {
   font-family: 'Gloock', sans-serif !important;
   font-size: 130px;
   text-shadow: 1.5px 2px #7D6E45;
+  text-align: center;
 }
 
 .aboutus-content {
@@ -66,4 +67,6 @@ code {
 .aboutus-h2 {
   font-family: 'Gloock', sans-serif !important;
 }
+
+
 
