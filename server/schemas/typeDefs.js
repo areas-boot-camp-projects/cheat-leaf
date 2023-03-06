@@ -45,19 +45,33 @@ const typeDefs = gql`
 		signUpUser(
 			username: String!,
 			email: String!,
-			password: String!
+			password: String!,
 		): User
 
 		signInUser(
 			username: String,
 			email: String,
-			password: String!
+			password: String!,
+		): User
+
+		editUser(
+			userId: ID!,
+			username: String,
+			email: String,
+			password: String,
+
+		): User
+
+		deleteUser(
+			userId: ID,
+			username: String,
+			email: String,
 		): User
 
 		addLeaf(
 			ownerUsername: String!,
-			title: String!,
-			content: String!,
+			title: String,
+			content: String,
 		): Leaf
 		
 		editLeaf(
