@@ -1,10 +1,12 @@
-import React from "react"
+import React from "react";
 import Navbar from './nav/Navbar';
-import Main from './Main';
 import Footer from './nav/Footer';
+import Main from './Main';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import {setAuthToken} from './helpers/setAuthToken';
+
+
+
 
 // Import the Apollo client.
 import {
@@ -12,6 +14,9 @@ import {
   InMemoryCache,
   ApolloProvider,
 } from "@apollo/client"
+
+// Child components.
+import Users from "./components/Users"
 
 // Create the Apollo client.
 const client = new ApolloClient({
@@ -29,9 +34,4 @@ function App() {
   )
 }
 
-  const token = localStorage.getItem("token");
-if (token) {
-    setAuthToken(token);
-}
-
-export default App;
+export default App
