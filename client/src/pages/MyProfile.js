@@ -12,7 +12,7 @@ export default function EditButton() {
   const handleProfilePictureChange = (event) => {
     setProfilePicture(event.target.files[0]);
   };
-  
+
   return (
     <div className="gradient-custom-2" style={{ backgroundColor: '#9de2ff' }}>
       <MDBContainer className="py-5 h-100">
@@ -22,7 +22,7 @@ export default function EditButton() {
               <div className="rounded-top text-white d-flex flex-row" style={{ backgroundColor: '#000', height: '200px' }}>
                 <div className="ms-4 mt-5 d-flex flex-column" style={{ width: '150px' }}>
                 <label htmlFor="profilePicture" className="profile-picture-upload">
-                  <MDBCardImage src={pfp}
+                  <MDBCardImage src={profilePicture ? URL.createObjectURL(profilePicture) : pfp}
                     alt="Generic placeholder image" className="mt-4 mb-2 img-thumbnail" fluid style={{ width: '150px', zIndex: '1' }} />
                     <div className="profile-picture-upload-overlay">
                       <i className="fas fa-camera"></i>
