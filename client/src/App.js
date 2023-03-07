@@ -1,12 +1,12 @@
-import React from "react"
+import React from "react";
 import Navbar from './nav/Navbar';
-import Main from './Main';
 import Footer from './nav/Footer';
+import Main from './Main';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { Route } from 'react-router-dom'
-import Routers from './routes'
-import {setAuthToken} from './helpers/setAuthToken';
+
+
+
 
 // Import the Apollo client.
 import {
@@ -34,9 +34,4 @@ function App() {
   )
 }
 
-  const token = localStorage.getItem("token");
-if (token) {
-    setAuthToken(token);
-}
-
-export default App;
+export default App

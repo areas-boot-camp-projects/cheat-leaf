@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Navbar, Nav, NavDropdown, Container, Form, Button } from 'react-bootstrap'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import logo from '../media/cheatleaflogo.png';
+import logo from '../media/cllogo2.png';
 
 
 export default class Navigation extends Component {
@@ -12,9 +12,9 @@ export default class Navigation extends Component {
                 <Navbar.Brand as={Link} to={"/"}>
                   <img
                     src={logo}
-                    width="70"
-                    height="30"
-                    className="d-inline-block align-top"
+                    width="95"
+                    height="40"
+                    className="d-inline-block align-top m-2"
                     alt="React Bootstrap logo"
                   />
                 </Navbar.Brand>
@@ -25,8 +25,8 @@ export default class Navigation extends Component {
                     style={{ maxHeight: '100px'}}
                     navbarScroll
                   >
-                    <Nav.Link as={Link} to={"/"} style={{color: '#493E20'}}>Home</Nav.Link>
-                    <Nav.Link as={Link} to={"/About"} style={{color: '#493E20'}}>About</Nav.Link>
+                    <Nav.Link as={Link} to={"/"} style={{color: '#F8F8F8'}}>Home</Nav.Link>
+                    <Nav.Link as={Link} to={"/About"} style={{color: '#F8F8F8', fontSize: '100%'}}>About</Nav.Link>
                   </Nav>
                  
                   <NavDropdown align='end' title="Login" id="navbarScrollingDropdown" flip>
