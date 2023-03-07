@@ -27,3 +27,26 @@ export const SIGN_IN_USER = gql`
 		}
 	}
 `
+
+export const ADD_LEAF = gql`
+	mutation AddLeaf(
+		$ownerUsername: String!,
+		$title: String!,
+		$content: String!
+	) {
+		addLeaf(
+			ownerUsername: $ownerUsername,
+			title: $title,
+			content: $content
+		) {
+			_id
+			title
+			content
+			createdAtFormatted
+			owner {
+				_id
+			}
+			ownerUsername
+		}
+	}
+`
