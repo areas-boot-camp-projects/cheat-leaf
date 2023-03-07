@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
 import { Navbar, Nav, NavDropdown, Container, Form, Button } from 'react-bootstrap'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import logo from '../media/cheatleaflogo.png';
 
 

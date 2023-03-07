@@ -15,6 +15,7 @@ const Main = () => {
       <Route exact path='/About' component={About}></Route>
       <Route exact path='/MyProfile' component={MyProfile}></Route>
     </Switch>
+  
   );
 }
 
