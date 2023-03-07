@@ -7,7 +7,7 @@ import pfp from '../media/daboy.jpg'
 
 
 
-export default function EditButton() {
+export default function MyProfile() {
   const [profilePicture, setProfilePicture] = useState(null);
 
   const handleProfilePictureChange = (event) => {
@@ -15,7 +15,7 @@ export default function EditButton() {
   };
 
   return (
-    <div className="gradient-custom-2" style={{ backgroundColor: '#9de2ff' }}>
+    <div className="" style={{ backgroundImage: "url(" + backgroundImage + ")", backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
       <MDBContainer className="py-5 h-100">
         <MDBRow className="justify-content-center align-items-center h-100">
           <MDBCol lg="9" xl="7">
