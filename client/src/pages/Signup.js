@@ -46,6 +46,9 @@ function Signup() {
   );
 }
 
+
+
+
 const onSubmit = (email, password) => {
   const loginPayload = {
       email: ' ',
@@ -61,15 +64,11 @@ const onSubmit = (email, password) => {
       setAuthToken(token);
 
       window.location.href = '/'
-
   })
   .catch(err => console.log(err));
 };
 
 export default Signup;
-
-
-
 
 
 
@@ -99,5 +98,6 @@ export default function SignUp() {
         )
     }
 */
+
 
 

@@ -4,8 +4,6 @@ import Main from './Main';
 import Footer from './nav/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { Route } from 'react-router-dom'
-import Routers from './routes'
 import {setAuthToken} from './helpers/setAuthToken';
 
 // Import the Apollo client.
@@ -14,9 +12,6 @@ import {
   InMemoryCache,
   ApolloProvider,
 } from "@apollo/client"
-
-// Child components.
-import Users from "./components/Users"
 
 // Create the Apollo client.
 const client = new ApolloClient({
