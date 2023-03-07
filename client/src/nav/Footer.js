@@ -5,13 +5,14 @@ import {
   MDBIcon,
   MDBBtn,
 } from 'mdb-react-ui-kit';
+import { Button } from 'react-bootstrap';
 
 export default function App() {
   return (
     <MDBFooter bgColor='none' className='text-center text-white text-lg-left' style={{backgroundColor: '#322B18'}}>
       <MDBContainer className='pt-1'>
         <section className='mb-1'>
-          <MDBBtn
+          <Button
             rippleColor="dark"
             color='link'
             floating
@@ -23,9 +24,9 @@ export default function App() {
             rel='noopener noreferrer'
           >
             <MDBIcon fab className='fa-twitter' />
-          </MDBBtn>
+          </Button>
 
-          <MDBBtn
+          <Button
             rippleColor="dark"
             color='link'
             floating
@@ -37,9 +38,9 @@ export default function App() {
             rel='noopener noreferrer'
           >
             <MDBIcon fab className='fa-instagram' />
-          </MDBBtn>
+          </Button>
 
-          <MDBBtn
+          <Button
             rippleColor="dark"
             color='link'
             floating
@@ -49,9 +50,9 @@ export default function App() {
             role='button'
           >
             <MDBIcon fab className='fa-linkedin' />
-          </MDBBtn>
+          </Button>
 
-          <MDBBtn
+          <Button
             rippleColor="dark"
             color='link'
             floating
@@ -63,7 +64,7 @@ export default function App() {
             rel='noopener noreferrer'
           >
             <MDBIcon fab className='fa-github' />
-          </MDBBtn>
+          </Button>
         </section>
       </MDBContainer>
 
