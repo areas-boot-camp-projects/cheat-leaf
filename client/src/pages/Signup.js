@@ -1,5 +1,6 @@
 // React.
 import React, { useState } from "react"
+import { Button } from "react-bootstrap";
 
 // UI.
 import { MDBBtn, MDBContainer, MDBCard, MDBCardBody, MDBInput, MDBCheckbox } from "mdb-react-ui-kit"
@@ -48,7 +49,7 @@ function SignUp() {
   }
 
   return (
-    <MDBContainer fluid className="d-flex align-items-center justify-content-center bg-image min-vh-100" style={{backgroundImage: "url(" + backgroundImage + ")", backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>
+    <MDBContainer fluid className="d-flex align-items-center justify-content-center bg-image min-vh-100" style={{backgroundImage: "url(" + backgroundImage + ")", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}>
       <div className="mask gradient-custom-3"></div>
       <MDBCard className="m-5" style={{borderRadius: "1rem", maxWidth: "500px"}}>
         <MDBCardBody className="p-5">
@@ -95,13 +96,13 @@ function SignUp() {
             />
           </div>
           
-          <MDBBtn
+          <Button
             className="mb-5 w-100 gradient-custom-4"
             size="lg"
             onClick={submitFormData}
           >
             Sign Up
-          </MDBBtn>
+          </Button>
 
         </MDBCardBody>
       </MDBCard>

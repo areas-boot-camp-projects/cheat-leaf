@@ -76,11 +76,12 @@ export default function Home() {
           alignItems: "center",
           backgroundPosition: "static",
           backgroundImage: "url(" + backgroundImage + ")",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          minHeight: "100vh",
-          minWidth: "100vw",
-          padding: "10px"
+          backgroundPosition: "center",
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'fit',
+          minHeight: '100vh',
+          minWidth: '100vw',
+          padding: '10px'
           }}>
       <h1 className="homepage-text text-center" xs="auto" style={{ marginTop: "50px", marginBottom: "50px", color: "#B5A478" }}>Explore the Forest</h1>
       <div style={{ display: "flex", justifyContent: "center", marginBottom: "20px", }}>
@@ -167,7 +168,9 @@ export default function Home() {
                 Posted by {post.username}USERNAME HERE at TIME HERE{post.time}
               </p>
 
-              <button className="rounded mb-0" style={{ marginTop: "10px", marginRight: "10px" }}>Comment</button>
+              <button className="rounded mb-0" style={{ marginTop: '10px', marginRight: '10px' }}>Comment</button>
+              <button className="rounded mb-0" style={{ marginTop: '10px', marginRight: '10px' }}>Edit</button>
+              <button className="rounded mb-0" style={{ marginTop: '10px', marginRight: '10px' }}>Delete</button>
             </div>
           </div>
         ))}
