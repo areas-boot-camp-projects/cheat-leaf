@@ -1,8 +1,9 @@
+// Dependencies.
+const { signToken } = require("../utils/auth")
+const { AuthenticationError } = require("apollo-server-express")
+
 // Models.
 const { User, Leaf } = require("../models")
-
-// Middleware.
-// ** nice-to-have: add validation and error handling as middleware. **
 
 // Resolvers.
 const resolvers = {
@@ -37,27 +38,39 @@ const resolvers = {
 	Mutation: {
 		signUpUser: async (parent, { username, email, password }) => {
 			// Sign up a user.
-			const addedUser = await User.create({
+			const user = await User.create({
 				username,
 				email,
 				password,
 			})
-			return addedUser
+			// Create a token.
+			const token = signToken(user)
+			return { user, token }
 		},
 
 		signInUser: async (parent, { username, email, password }) => {
-			let signedInUser
+			let user
 			// If there’s a username, use it to find the user.
 			if (username) {
-				signedInUser = await User.findOne({ username })
+				user = await User.findOne({ username })
 			}
 			// If there’s an email, use it to find the user.
 			if (!username && email) {
-				signedInUser = await User.findOne({ email })
+				user = await User.findOne({ email })
 			}
+			// If there’s no user, throw an error.
+			if (!user) {
+				throw new AuthenticationError("User not found.")
+			}			
 			// If there’s a user, validate the password.
-			const validatedPassword = await signedInUser.validatePassword(password)
-			return validatedPassword ? signedInUser : null
+			const validatedPassword = await user.validatePassword(password)
+			// If the password is incorrect, throw an error.
+			if (!validatedPassword) {
+				throw new AuthenticationError("Incorrect password.")
+			}
+			// Create a token.
+			const token = signToken(user)
+			return { user, token }
 		},
 
 		editUser: async (parent, { userId, username, email, password }) => {

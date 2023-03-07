@@ -23,6 +23,11 @@ const typeDefs = gql`
 		updatedAtFormatted: String!
 	}
 
+	type Auth {
+		user: User
+		token: ID!
+	}
+
 	type Query {
 		users: [User]
 		
@@ -46,20 +51,19 @@ const typeDefs = gql`
 			username: String!,
 			email: String!,
 			password: String!,
-		): User
+		): Auth
 
 		signInUser(
 			username: String,
 			email: String,
 			password: String!,
-		): User
+		): Auth
 
 		editUser(
 			userId: ID!,
 			username: String,
 			email: String,
 			password: String,
-
 		): User
 
 		deleteUser(
