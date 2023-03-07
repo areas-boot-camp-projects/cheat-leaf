@@ -31,24 +31,10 @@ export default function Home() {
           minWidth: '100vw',
           padding: '10px'
           }}>
-          <h1 className='homepage-text text-center' xs='auto' style={{marginTop: '50px', marginBottom: '50px', color: '#B5A478'}}>Explore the Forest</h1>
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px', }}>
-            <input className="rounded-pill search-bar" type="text" placeholder="Search" style={{ width: '300px', color: '#d4cbb2', border: 'none'}} />
-          </div>
-          <div>
-          <button style={{marginBottom: '60px'}} className="rounded-pill newleaf-bttn">Grow New Leaf</button>
-          </div>
-          <div style={{ 
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            width: '90%',
-            padding: '10px',
-          }}></div>
       <h1 className='homepage-text text-center' xs='auto' style={{ marginTop: '50px', marginBottom: '50px', color: '#B5A478' }}>Explore the Forest</h1>
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px', }}>
         <input className="rounded-pill search-bar" type="text" placeholder="Search" style={{ width: '300px', color: '#d4cbb2' }} />
-      </div>
+      </div> 
       <div id='newLeaf'>
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="1">
