@@ -96,6 +96,8 @@ export default function Home() {
               </p>
 
               <button className="rounded mb-0" style={{ marginTop: '10px', marginRight: '10px' }}>Comment</button>
+              <button className="rounded mb-0" style={{ marginTop: '10px', marginRight: '10px' }}>Edit</button>
+              <button className="rounded mb-0" style={{ marginTop: '10px', marginRight: '10px' }}>Delete</button>
             </div>
           </div>
         ))}
