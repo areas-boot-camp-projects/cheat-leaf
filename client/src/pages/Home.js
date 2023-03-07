@@ -25,8 +25,9 @@ export default function Home() {
           alignItems: 'center',
           backgroundPosition: 'static',
           backgroundImage: "url(" + backgroundImage + ")",
+          backgroundPosition: "center",
           backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
+          backgroundSize: 'fit',
           minHeight: '100vh',
           minWidth: '100vw',
           padding: '10px'
@@ -96,6 +97,8 @@ export default function Home() {
               </p>
 
               <button className="rounded mb-0" style={{ marginTop: '10px', marginRight: '10px' }}>Comment</button>
+              <button className="rounded mb-0" style={{ marginTop: '10px', marginRight: '10px' }}>Edit</button>
+              <button className="rounded mb-0" style={{ marginTop: '10px', marginRight: '10px' }}>Delete</button>
             </div>
           </div>
         ))}

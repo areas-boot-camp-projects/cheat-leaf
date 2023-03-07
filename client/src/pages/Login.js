@@ -1,5 +1,6 @@
 // React.
-import React, { useState } from "react"
+import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 
 // UI.
 import {MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBIcon, MDBCheckbox} from "mdb-react-ui-kit"
@@ -47,7 +48,7 @@ function SignIn() {
 
   // JSX.
   return (
-    <MDBContainer fluid className="d-flex align-items-center justify-content-center bg-image min-vh-100" style={{backgroundImage: "url(" + backgroundImage + ")", backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>
+    <MDBContainer fluid className="d-flex align-items-center justify-content-center bg-image min-vh-100" style={{backgroundImage: "url(" + backgroundImage + ")", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}>
       <MDBRow className="d-flex justify-content-center align-items-center h-100">
         <MDBCol col="12">
 
@@ -80,25 +81,25 @@ function SignIn() {
 
               <MDBCheckbox name="flexCheck" id="flexCheckDefault" className="mb-4" label="Remember password" />
 
-              <MDBBtn
+              <Button
                 id="sign-in-button"
                 size="lg"
                 onClick={submitFormData}
               >
                 Sign In
-              </MDBBtn>
+              </Button>
 
               <hr className="my-4" />
 
-              <MDBBtn className="mb-2 w-100" size="lg" style={{backgroundColor: "#dd4b39"}}>
+              <Button className="mb-2 w-100" size="lg" style={{backgroundColor: "#dd4b39"}}>
                 <MDBIcon fab icon="google" className="mx-2"/>
                 Sign In with Google
-              </MDBBtn>
+              </Button>
 
-              <MDBBtn className="mb-4 w-100" size="lg" style={{backgroundColor: "#3b5998"}}>
+              <Button className="mb-4 w-100" size="lg" style={{backgroundColor: "#3b5998"}}>
                 <MDBIcon fab icon="facebook-f" className="mx-2"/>
                 Sign In with Facebook
-              </MDBBtn>
+              </Button>
 
             </MDBCardBody>
           </MDBCard>
