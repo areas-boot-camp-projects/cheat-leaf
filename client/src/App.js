@@ -4,6 +4,9 @@ import Main from './Main';
 import Footer from './nav/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { Route } from 'react-router-dom'
+import Routers from './routes'
+import {setAuthToken} from './helpers/setAuthToken';
 
 // Import the Apollo client.
 import {
@@ -31,4 +34,9 @@ function App() {
   )
 }
 
-export default App
+  const token = localStorage.getItem("token");
+if (token) {
+    setAuthToken(token);
+}
+
+export default App;
