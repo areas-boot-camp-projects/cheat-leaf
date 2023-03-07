@@ -1,53 +1,103 @@
-import React from 'react'
-import { Button, Form, FormGroup, Label, Input } from 'react-bootstrap'
+// React.
+import React, { useState } from "react"
 
-import {
-  MDBBtn,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardBody,
-  MDBInput,
-  MDBIcon,
-  MDBCheckbox
-}
-from 'mdb-react-ui-kit';
-import backgroundImage from '../media/forestimg.jpg';
+// UI.
+import {MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBIcon, MDBCheckbox} from "mdb-react-ui-kit"
+import backgroundImage from "../media/forestimg.jpg"
 
+// API and authentication.
+import { useMutation } from "@apollo/client"
+import { SIGN_IN_USER } from "../gql/mutations"
+import { saveTokenToLocalStorage } from "../helpers/auth"
 
-function Login() {
+// Component.
+function SignIn() {
+  // Set the form data initial state.
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  })
+
+  // Update the form data state.
+  function updateFormData(e) {
+    const { name, value } = e.target
+    setFormData({ ...formData, [name]: value })
+  }
+
+  // Set up the mutation.
+  const [signInUser] = useMutation(SIGN_IN_USER)
+
+  // Sign in the user.
+  async function submitFormData(e) {
+    e.preventDefault()
+    try {
+      const { data } = await signInUser({
+        variables: { ...formData },
+      })
+      saveTokenToLocalStorage(data.signInUser.token)
+    } catch (err) {
+      console.log(err)
+    }
+    // Clear the form data.
+    setFormData({
+      email: "",
+      password: "",
+    })
+  }
+
+  // JSX.
   return (
-    <MDBContainer fluid className='d-flex align-items-center justify-content-center bg-image' style={{backgroundImage: "url(" + backgroundImage + ")", backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
+    <MDBContainer fluid className="d-flex align-items-center justify-content-center bg-image" style={{backgroundImage: "url(" + backgroundImage + ")", backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>
 
-      <MDBRow className='d-flex justify-content-center align-items-center h-100'>
-        <MDBCol col='12'>
+      <MDBRow className="d-flex justify-content-center align-items-center h-100">
+        <MDBCol col="12">
 
-          <MDBCard className='bg-white my-5 mx-auto' style={{borderRadius: '1rem', maxWidth: '500px'}}>
-            <MDBCardBody className='p-5 w-100 d-flex flex-column'>
+          <MDBCard className="bg-white my-5 mx-auto" style={{borderRadius: "1rem", maxWidth: "500px"}}>
+            <MDBCardBody className="p-5 w-100 d-flex flex-column">
 
               <h2 className="fw-bold mb-1 text-center">Sign In</h2>
-              <p className="text-white-50 mb-3">Please enter your login and password!</p>
 
-              <MDBInput wrapperClass='mb-2 w-100' label='Email address' id='formControlLg' type='email' size="lg"/>
-              <MDBInput wrapperClass='mb-4 w-100' label='Password' id='formControlLg' type='password' size="lg"/>
+              <MDBInput 
+                wrapperClass="mb-2 w-100"
+                label="Email"
+                id="formControlLg"
+                type="email"
+                size="lg"
+                name="email"
+                value={formData.email}
+                onChange={updateFormData}
+              />
+              
+              <MDBInput
+                wrapperClass="mb-4 w-100"
+                label="Password"
+                id="formControlLg"
+                type="password"
+                size="lg"
+                name="password"
+                value={formData.password}
+                onChange={updateFormData}
+              />
 
-              <MDBCheckbox name='flexCheck' id='flexCheckDefault' className='mb-4' label='Remember password' />
+              <MDBCheckbox name="flexCheck" id="flexCheckDefault" className="mb-4" label="Remember password" />
 
-              <MDBBtn size='lg'>
-                Login
+              <MDBBtn
+                size="lg"
+                onClick={submitFormData}
+              >
+                Sign In
               </MDBBtn>
 
               <hr className="my-4" />
 
-              <MDBBtn className="mb-2 w-100" size="lg" style={{backgroundColor: '#dd4b39'}}>
+              <MDBBtn className="mb-2 w-100" size="lg" style={{backgroundColor: "#dd4b39"}}>
                 <MDBIcon fab icon="google" className="mx-2"/>
-                Sign in with google
+                Sign In with Google
               </MDBBtn>
 
-              <MDBBtn className="mb-4 w-100" size="lg" style={{backgroundColor: '#3b5998'}}>
+              <MDBBtn className="mb-4 w-100" size="lg" style={{backgroundColor: "#3b5998"}}>
                 <MDBIcon fab icon="facebook-f" className="mx-2"/>
-                Sign in with facebook
+                Sign In with Facebook
               </MDBBtn>
 
             </MDBCardBody>
@@ -57,8 +107,7 @@ function Login() {
       </MDBRow>
 
     </MDBContainer>
-  );
+  )
 }
-  
 
-    export default Login
+export default SignIn
