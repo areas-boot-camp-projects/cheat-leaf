@@ -1,5 +1,6 @@
 // React.
 import React, { useState } from "react"
+import { Button } from "react-bootstrap";
 
 // UI.
 import { MDBBtn, MDBContainer, MDBCard, MDBCardBody, MDBInput, MDBCheckbox } from "mdb-react-ui-kit"
@@ -95,13 +96,13 @@ function SignUp() {
             />
           </div>
           
-          <MDBBtn
+          <Button
             className="mb-5 w-100 gradient-custom-4"
             size="lg"
             onClick={submitFormData}
           >
             Sign Up
-          </MDBBtn>
+          </Button>
 
         </MDBCardBody>
       </MDBCard>
