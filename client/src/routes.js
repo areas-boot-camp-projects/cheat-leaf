@@ -15,11 +15,11 @@ function Routes() {
            <Switch>
                <RouteGuard
                    exact
-                   path="/"
+                   path="./components/RouteGuard"
                    component={HomePage}
                />
                <Route
-                   path="/login"
+                   path="./pages/Login"
                    component={LoginPage}
                />
                <Redirect to="/" />

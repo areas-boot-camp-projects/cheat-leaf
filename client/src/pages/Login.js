@@ -1,6 +1,5 @@
 import React from 'react'
 import { Button, Form, FormGroup, Label, Input } from 'react-bootstrap'
-import axios from 'axios';
 
 import {
   MDBBtn,
@@ -60,26 +59,6 @@ function Login() {
     </MDBContainer>
   );
 }
-
-
-    const handleSubmit = (email, password) => {
-        const loginPayload = {
-            email: ' ',
-            password: ' '
-        }
-    
-        axios.post("", loginPayload)
-            .then(response => {
-            const token = response.data.token;
-        
-            localStorage.setItem("token", token);
-
-            setAuthToken(token);
-
-            window.location.href = '/'
-
-        })
-        .catch(err => console.log(err));
-    };
+  
 
     export default Login

@@ -7,7 +7,7 @@ import { Route } from 'react-router-dom'
 
 import axios from 'axios';
 import Routers from './routes'
-import { setAuthToken } from "./helpers/setAuthToken"
+import {setAuthToken} from './helpers/setAuthToken';
 
 // Import the Apollo client.
 import {
@@ -25,17 +25,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 })
 
-const token = localStorage.getItem("token");
-if (token) {
-    setAuthToken(token);
-}
-
-return (
-  <div className="App">
-    <Routers/>
-  </div>
-);
-
 function App() {
   return (
     <ApolloProvider client={client}> 
@@ -43,6 +32,11 @@ function App() {
       <Main />
     </ApolloProvider>
   )
-}  
+}
+
+  const token = localStorage.getItem("token");
+if (token) {
+    setAuthToken(token);
+}
 
 export default App;
