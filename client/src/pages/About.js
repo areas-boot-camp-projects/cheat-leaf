@@ -13,7 +13,7 @@ export default function About() {
            </div>
           </div>
         </MDBCol>
-        <MDBCol size='lg' style={{marginTop: '150px'}}>
+        <MDBCol size='lg' style={{marginTop: '150px', marginBottom: '200px'}}>
           <div className="aboutus-content">
             <h2 className='aboutus-h2'>What is Cheat Leaf?</h2>
             <p>
