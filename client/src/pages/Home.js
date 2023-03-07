@@ -37,7 +37,7 @@ export default function Home() {
       </div> 
       <div id='newLeaf'>
         <Accordion defaultActiveKey="0">
-          <Accordion.Item eventKey="1">
+          <Accordion.Item eventKey="1" style={{marginBottom: '70px'}}>
             <Accordion.Header>Grow New Leaf</Accordion.Header>
             <Accordion.Body>
               <Form>
@@ -64,7 +64,7 @@ export default function Home() {
       <div style={{
         display: 'flex',
         flexDirection: 'row',
-        alignItems: 'center',
+        justifyContent: 'center',
         width: '90%',
         padding: '10px',
         flexWrap: 'wrap',
@@ -73,12 +73,7 @@ export default function Home() {
       }}>
         {posts.map(post => (
           <div key={post.id} style={{
-            marginBottom: '90px',
-            width: '100%',
-            /*alignSelf: 'stretch', */
-            flexWrap: 'wrap',
-            flexShrink: '0',
-            flexBasis: '400px',
+            width: '80%',
             boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)',
             backgroundColor: '#F4F1E6',
             borderRadius: '1rem',
@@ -86,8 +81,7 @@ export default function Home() {
             padding: '20px',
             display: 'flex',
             alignItems: 'center',
-            margin: '10px',
-
+            margin: '15px',
           }}>
             <div style={{ marginRight: '10px' }}>
               <FontAwesomeIcon icon={faArrowUp} style={{ color: 'green' }} />
