@@ -1,10 +1,11 @@
-//import React from 'react';
-//import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography } from 'mdb-react-ui-kit';
+import React, { useState }from 'react';
+import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography } from 'mdb-react-ui-kit';
+
 import backgroundImage from '../media/forestimg.jpg';
 import pfp from '../media/daboy.jpg'
 
-import React, { useState }from 'react';
-import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography } from 'mdb-react-ui-kit';
+
+
 
 export default function EditButton() {
   const [profilePicture, setProfilePicture] = useState(null);
