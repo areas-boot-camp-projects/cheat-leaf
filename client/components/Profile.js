@@ -18,8 +18,8 @@ export default function Basic() {
                       fluid />
                   </div>
                   <div className="flex-grow-1 ms-3">
-                    <MDBCardTitle>Danny McLoan</MDBCardTitle>
-                    <MDBCardText>Senior Journalist</MDBCardText>
+                    <MDBCardTitle>Mucinex Guy</MDBCardTitle>
+                    <MDBCardText>Senior Germ Controller</MDBCardText>
 
                     <div className="d-flex justify-content-start rounded-3 p-2 mb-2"
                       style={{ backgroundColor: '#efefef' }}>
