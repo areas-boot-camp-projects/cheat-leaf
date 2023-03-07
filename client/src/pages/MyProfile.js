@@ -3,10 +3,16 @@
 import backgroundImage from '../media/forestimg.jpg';
 import pfp from '../media/daboy.jpg'
 
-import React from 'react';
+import React, { useState }from 'react';
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography } from 'mdb-react-ui-kit';
 
 export default function EditButton() {
+  const [profilePicture, setProfilePicture] = useState(null);
+
+  const handleProfilePictureChange = (event) => {
+    setProfilePicture(event.target.files[0]);
+  };
+  
   return (
     <div className="gradient-custom-2" style={{ backgroundColor: '#9de2ff' }}>
       <MDBContainer className="py-5 h-100">
@@ -15,8 +21,20 @@ export default function EditButton() {
             <MDBCard>
               <div className="rounded-top text-white d-flex flex-row" style={{ backgroundColor: '#000', height: '200px' }}>
                 <div className="ms-4 mt-5 d-flex flex-column" style={{ width: '150px' }}>
+                <label htmlFor="profilePicture" className="profile-picture-upload">
                   <MDBCardImage src={pfp}
                     alt="Generic placeholder image" className="mt-4 mb-2 img-thumbnail" fluid style={{ width: '150px', zIndex: '1' }} />
+                    <div className="profile-picture-upload-overlay">
+                      <i className="fas fa-camera"></i>
+                      <span>Choose file</span>
+                    </div>
+                  </label>
+                  <input
+                    id="profilePicture"
+                    type="file"
+                    onChange={handleProfilePictureChange}
+                    style={{ display: 'none' }}
+                  />
                   <MDBBtn outline color="dark" style={{height: '36px', overflow: 'visible'}}>
                     Edit profile
                   </MDBBtn>
