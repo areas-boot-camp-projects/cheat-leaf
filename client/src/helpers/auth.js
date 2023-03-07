@@ -4,6 +4,13 @@ function saveTokenToLocalStorage(token) {
 	window.location.assign("/")
 }
 
+// Delete the token from local storage.
+function deleteTokenFromLocalStorage() {
+	localStorage.removeItem("token")
+	window.location.assign("/")
+}
+
 module.exports = {
 	saveTokenToLocalStorage,
+	deleteTokenFromLocalStorage,
 }

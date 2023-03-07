@@ -3,6 +3,8 @@ import { Navbar, Nav, NavDropdown, Container, Form, Button } from 'react-bootstr
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import logo from '../media/cllogo2.png';
 
+// Authentication.
+import { deleteTokenFromLocalStorage } from "../helpers/auth"
 
 export default class Navigation extends Component {
     render() {
@@ -35,7 +37,8 @@ export default class Navigation extends Component {
                         Sign Up
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
-                      <NavDropdown.Item as={Link} to={"/#"}>
+                      {/* <NavDropdown.Item as={Link} to={"/#"}> */}
+                      <NavDropdown.Item onClick={deleteTokenFromLocalStorage}>
                         Sign Out
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
