@@ -15,7 +15,6 @@ export default function Home() {
         { id: 3, title: 'Getting Login/Sign up Backend Working', content: 'Setting up the login/sign up backend to register for the website.' },
         { id: 4, title: 'Setup the "About" page', content: 'We will still need to setup the about page. The "About" page should have the same static background as the home page.' },
         { id: 5, title: 'TROY ADD THE FOOTER AND PROFILE PLZ', content: 'Add the footer and my profile page to the project so our backend team can get those working with user input aas well.' }, 
-        
       ];
     
       return (
@@ -33,7 +32,7 @@ export default function Home() {
           }}>
           <h1 className='homepage-text text-center' xs='auto' style={{marginTop: '50px', marginBottom: '50px', color: '#B5A478'}}>Explore the Forest</h1>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px', }}>
-            <input className="rounded-pill search-bar" type="text" placeholder="Search" style={{ width: '300px', color: '#d4cbb2'}} />
+            <input className="rounded-pill search-bar" type="text" placeholder="Search" style={{ width: '300px', color: '#d4cbb2', border: 'none'}} />
           </div>
           <div>
           <button style={{marginBottom: '60px'}} className="rounded-pill newleaf-bttn">Grow New Leaf</button>

@@ -11,6 +11,19 @@ from 'mdb-react-ui-kit';
 import backgroundImage from '../media/forestimg.jpg';
 
 function Signup() {
+
+    /*const [validated, setValidated] = useState(false);
+
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    setValidated(true);
+  }; */
+
   return (
     <MDBContainer fluid className='d-flex align-items-center justify-content-center bg-image' style={{backgroundImage: "url(" + backgroundImage + ")", backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
       <div className='mask gradient-custom-3'></div>
@@ -32,8 +45,12 @@ function Signup() {
 }
 
 export default Signup;
-/* import { Button, Form, FormGroup, Label, Input, Container, Row, Col } from 'react-bootstrap'
 
+
+
+
+
+/* import { Button, Form, FormGroup, Label, Input, Container, Row, Col } from 'react-bootstrap'
 
 export default function SignUp() {
         return (
@@ -59,3 +76,4 @@ export default function SignUp() {
         )
     }
 */
+
