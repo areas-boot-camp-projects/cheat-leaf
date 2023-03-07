@@ -24,7 +24,7 @@ export default function MyProfile() {
                 <div className="ms-4 mt-5 d-flex flex-column" style={{ width: '150px' }}>
                 <label htmlFor="profilePicture" className="profile-picture-upload">
                   <MDBCardImage src={profilePicture ? URL.createObjectURL(profilePicture) : pfp}
-                    alt="Generic placeholder image" className="mt-4 mb-2 img-thumbnail" fluid style={{ width: '150px', zIndex: '1' }} />
+                    alt="Generic placeholder image" className="mt-4 mb-2 img-thumbnail" fluid style={{ maxWidth: '150px', height: '125px', aspectRatio: '1/1', zIndex: '1' }} />
                     <div className="profile-picture-upload-overlay">
                       <i className="fas fa-camera"></i>
                       <span>Choose file</span>
@@ -36,18 +36,20 @@ export default function MyProfile() {
                     onChange={handleProfilePictureChange}
                     style={{ display: 'none' }}
                   />
-                  <MDBBtn outline color="dark" style={{height: '36px', overflow: 'visible'}}>
-                    Edit profile
-                  </MDBBtn>
-                </div>
+                 </div>
                 <div className="ms-3" style={{ marginTop: '130px' }}>
                   <MDBTypography tag="h5">CEO of Mucinex</MDBTypography>
                   <MDBCardText>Your Body</MDBCardText>
                 </div>
               </div>
               <div className="p-4 text-black" style={{ backgroundColor: '#f8f9fa' }}>
+                 <div> 
+                    <MDBBtn outline color="dark" style={{height: '36px', overflow: 'visible'}}>
+                    Edit profile
+                    </MDBBtn>
+                  </div>
                 <div className="d-flex justify-content-end text-center py-1">
-                  <div>
+                    <div>
                     <MDBCardText className="mb-1 h5">253</MDBCardText>
                     <MDBCardText className="small text-muted mb-0">Leafs</MDBCardText>
                   </div>
