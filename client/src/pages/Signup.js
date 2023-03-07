@@ -48,7 +48,7 @@ function SignUp() {
   }
 
   return (
-    <MDBContainer fluid className="d-flex align-items-center justify-content-center bg-image min-vh-100" style={{backgroundImage: "url(" + backgroundImage + ")", backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>
+    <MDBContainer fluid className="d-flex align-items-center justify-content-center bg-image min-vh-100" style={{backgroundImage: "url(" + backgroundImage + ")", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}>
       <div className="mask gradient-custom-3"></div>
       <MDBCard className="m-5" style={{borderRadius: "1rem", maxWidth: "500px"}}>
         <MDBCardBody className="p-5">
