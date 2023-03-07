@@ -1,4 +1,6 @@
 import React from 'react'
+import axios from '../api/axios';
+import { setAuthToken } from "../helpers/setAuthToken";
 import {
   MDBBtn,
   MDBContainer,
@@ -44,7 +46,28 @@ function Signup() {
   );
 }
 
+const onSubmit = (email, password) => {
+  const loginPayload = {
+      email: ' ',
+      password: ' '
+  }
+
+  axios.post("", loginPayload)
+      .then(response => {
+      const token = response.data.token;
+  
+      localStorage.setItem("token", token);
+
+      setAuthToken(token);
+
+      window.location.href = '/'
+
+  })
+  .catch(err => console.log(err));
+};
+
 export default Signup;
+
 
 
 
@@ -76,4 +99,5 @@ export default function SignUp() {
         )
     }
 */
+
 
