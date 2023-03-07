@@ -5,8 +5,6 @@ import Footer from './nav/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Route } from 'react-router-dom'
-
-import axios from 'axios';
 import Routers from './routes'
 import {setAuthToken} from './helpers/setAuthToken';
 
