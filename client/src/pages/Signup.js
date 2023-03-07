@@ -13,6 +13,19 @@ from 'mdb-react-ui-kit';
 import backgroundImage from '../media/forestimg.jpg';
 
 function Signup() {
+
+    /*const [validated, setValidated] = useState(false);
+
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    setValidated(true);
+  }; */
+
   return (
     <MDBContainer fluid className='d-flex align-items-center justify-content-center bg-image' style={{backgroundImage: "url(" + backgroundImage + ")", backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
       <div className='mask gradient-custom-3'></div>
@@ -33,6 +46,8 @@ function Signup() {
   );
 }
 
+
+export default Signup;
 const onSubmit = (email, password) => {
   const loginPayload = {
       email: ' ',
@@ -49,6 +64,36 @@ const onSubmit = (email, password) => {
 
       window.location.href = '/'
 
+
+
+
+
+/* import { Button, Form, FormGroup, Label, Input, Container, Row, Col } from 'react-bootstrap'
+
+export default function SignUp() {
+        return (
+            <Container>
+                <Row>
+                    <Col></Col>
+                    <Col className='pt-3'>
+                        <Form>
+                            <Form.Group >
+                                <Form.Label>Enter your email</Form.Label>
+                                <Form.Control type="email" placeholder="Enter you email" />
+                            </Form.Group>
+                            <Form.Group >
+                                <Form.Label>Create a password</Form.Label>
+                                <Form.Control type="password" placeholder="Enter you password" />
+                            </Form.Group>
+                            <Button type="submit">Sign Up!</Button>
+                        </Form>
+                    </Col>
+                    <Col></Col>
+                </Row>
+            </Container>
+        )
+    }
+*/
   })
   .catch(err => console.log(err));
 };

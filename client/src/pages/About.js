@@ -4,7 +4,7 @@ import backgroundImage from '../media/forestimghalf.jpg';
 
 export default function About() {
   return (
-     <MDBContainer fluid className='vh-100' style={{backgroundColor: '#F4F1E6'}}>
+     <MDBContainer fluid className='min-vh-100' style={{backgroundColor: '#F4F1E6'}}>
       <MDBRow style={{overFlow: 'hidden'}}>
         <MDBCol className='aboutus-img vh-100' size='lg-6' style={{backgroundImage: "url(" + backgroundImage + ")", backgroundSize: 'cover', backgroundPosition: 'static'}} >
           <div className='aboutus-text d-flex align-items-center justify-content-center' style={{color: '#B5A478', marginTop: '250px' }}>
@@ -13,7 +13,7 @@ export default function About() {
            </div>
           </div>
         </MDBCol>
-        <MDBCol size='lg' style={{marginTop: '150px', marginBottom: '200px'}}>
+        <MDBCol size='lg' style={{marginTop: '150px'}}>
           <div className="aboutus-content">
             <h2 className='aboutus-h2'>What is Cheat Leaf?</h2>
             <p>
