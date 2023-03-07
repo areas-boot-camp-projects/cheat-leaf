@@ -44,16 +44,30 @@ const userSchema = new Schema(
 	},
 )
 
-// Encrypt the password before it’s saved.
+// Encrypt the password before saving a user.
 userSchema.pre("save", async function (next) {
-	if (this.isNew || this.isModified("password")) {
+	if (this.isModified("password")) {
 		const saltRounds = 10
-		this.password = await bcrypt.hash(this.password, saltRounds)
+		const hashedPassword = await bcrypt.hash(this.password, saltRounds)
+		this.password = hashedPassword
 	}
-	next()
+	return next()
 })
 
-// Validate password.
+// Encrypt the password before updating a user.
+userSchema.pre("findOneAndUpdate", async function (next) {
+	const password = this.getUpdate().password
+	if (!password) {
+		return next()
+	} else {
+		const saltRounds = 10
+		const hashedPassword = await bcrypt.hash(password, saltRounds)
+		this.updateOne({ password: hashedPassword })
+	}
+	return next()
+})
+
+// Validate a password.
 userSchema.methods.validatePassword = async function (password) {
 	return bcrypt.compare(password, this.password)
 }

@@ -1,12 +1,10 @@
 // Models.
 const { User, Leaf } = require("../models")
-const { findOne } = require("../models/User")
 
 // Middleware.
-// ** todo: add validation / error handling (as middleware). **
+// ** nice-to-have: add validation and error handling as middleware. **
 
 // Resolvers.
-// ** todo: add try/catch blocks to better catch errors. **
 const resolvers = {
 	Query: {
 		users: async () => {
@@ -21,23 +19,24 @@ const resolvers = {
 
 		userLeafs: async (parent, { username }) => {
 			// Get a user’s leaves by owner username.
-			return await Leaf.find({ ownerUsername: username }).populate("ownerId")
+			console.log(await Leaf.find({ ownerUsername: username }).populate("owner"))
+			return await Leaf.find({ ownerUsername: username }).populate("owner")
 		},
 
 		leafs: async () => {
 			// Get all leaves.
-			return await Leaf.find().populate("ownerId")
+			return await Leaf.find().populate("owner")
 		},
 
 		leaf: async (parent, { leafId }) => {
 			// Get a leaf by its ID.
-			return await Leaf.findById(leafId).populate("ownerId")
+			return await Leaf.findById(leafId).populate("owner")
 		},
 	},
 
 	Mutation: {
 		signUpUser: async (parent, { username, email, password }) => {
-			// Create the user.
+			// Sign up a user.
 			const addedUser = await User.create({
 				username,
 				email,
@@ -53,7 +52,7 @@ const resolvers = {
 				signedInUser = await User.findOne({ username })
 			}
 			// If there’s an email, use it to find the user.
-			if (email) {
+			if (!username && email) {
 				signedInUser = await User.findOne({ email })
 			}
 			// If there’s a user, validate the password.

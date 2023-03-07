@@ -15,7 +15,7 @@ const typeDefs = gql`
 
 	type Leaf {
 		_id: ID!
-		ownerId: User!
+		owner: User!
 		ownerUsername: String!
 		title: String!
 		content: String!
@@ -70,8 +70,8 @@ const typeDefs = gql`
 
 		addLeaf(
 			ownerUsername: String!,
-			title: String,
-			content: String,
+			title: String!,
+			content: String!,
 		): Leaf
 		
 		editLeaf(
