@@ -14,11 +14,6 @@ code {
     monospace;
 }
 
-#vidText
-{
-  text-shadow: 4px 4px 8px #000000;
-}
-
 .nav-color {
   background-color: #245C31 !important;
   color: #F8F8F8;

@@ -26,7 +26,7 @@ export default function Home() {
           backgroundPosition: 'static',
           backgroundImage: "url(" + backgroundImage + ")",
           backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
+          backgroundSize: 'fit',
           minHeight: '100vh',
           minWidth: '100vw',
           padding: '10px'
