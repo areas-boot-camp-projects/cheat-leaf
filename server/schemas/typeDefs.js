@@ -6,6 +6,7 @@ const typeDefs = gql`
 		_id: ID!
 		username: String!
 		email: String!
+		password: String!
 		createdAtFormatted: String!
 		updatedAtFormatted: String!
 		leafs: [Leaf]!
@@ -14,7 +15,7 @@ const typeDefs = gql`
 
 	type Leaf {
 		_id: ID!
-		ownerId: User!
+		owner: User!
 		ownerUsername: String!
 		title: String!
 		content: String!
@@ -41,6 +42,32 @@ const typeDefs = gql`
 	}
 
 	type Mutation {
+		signUpUser(
+			username: String!,
+			email: String!,
+			password: String!,
+		): User
+
+		signInUser(
+			username: String,
+			email: String,
+			password: String!,
+		): User
+
+		editUser(
+			userId: ID!,
+			username: String,
+			email: String,
+			password: String,
+
+		): User
+
+		deleteUser(
+			userId: ID,
+			username: String,
+			email: String,
+		): User
+
 		addLeaf(
 			ownerUsername: String!,
 			title: String!,
