@@ -15,9 +15,6 @@ import {
   ApolloProvider,
 } from "@apollo/client"
 
-// Child components.
-import Users from "./components/Users"
-
 // Create the Apollo client.
 const client = new ApolloClient({
   uri: "/graphql",

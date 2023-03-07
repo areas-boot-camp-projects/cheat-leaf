@@ -23,7 +23,7 @@ function SignIn() {
     const { name, value } = e.target
     setFormData({ ...formData, [name]: value })
   }
-
+  
   // Set up the mutation.
   const [signInUser] = useMutation(SIGN_IN_USER)
 
@@ -81,6 +81,7 @@ function SignIn() {
               <MDBCheckbox name="flexCheck" id="flexCheckDefault" className="mb-4" label="Remember password" />
 
               <MDBBtn
+                id="sign-in-button"
                 size="lg"
                 onClick={submitFormData}
               >
