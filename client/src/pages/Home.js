@@ -25,6 +25,7 @@ export default function Home() {
           alignItems: 'center',
           backgroundPosition: 'static',
           backgroundImage: "url(" + backgroundImage + ")",
+          backgroundPosition: "center",
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'fit',
           minHeight: '100vh',
