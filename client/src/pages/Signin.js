@@ -54,7 +54,7 @@ function SignIn() {
         <MDBRow className="d-flex justify-content-center align-items-center h-100">
           <MDBCol col="12">
 
-            <MDBCard className="bg-white my-5 mx-auto" style={{borderRadius: "1rem", maxWidth: "500px"}}>
+            <MDBCard className="bg-white m-5" style={{borderRadius: "1rem", maxWidth: "500px"}}>
               <MDBCardBody className="p-5 w-100 d-flex flex-column">
 
                 <h2 className="fw-bold mb-5 text-center">Sign In</h2>
@@ -93,17 +93,6 @@ function SignIn() {
                   Sign In
                 </Button>
 
-                <hr className="my-4" />
-
-                <Button className="mb-2 w-100" size="lg" style={{backgroundColor: "#dd4b39"}}>
-                  <MDBIcon fab icon="google" className="mx-2"/>
-                  Sign In with Google
-                </Button>
-
-                <Button className="mb-4 w-100" size="lg" style={{backgroundColor: "#3b5998"}}>
-                  <MDBIcon fab icon="facebook-f" className="mx-2"/>
-                  Sign In with Facebook
-                </Button>
 
               </MDBCardBody>
             </MDBCard>

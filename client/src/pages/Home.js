@@ -12,18 +12,21 @@ import { useMutation } from "@apollo/client"
 import { ADD_LEAF } from "../gql/mutations"
 import { getTokenFromLocalStorage, decodeToken } from "../helpers/auth"
 
+
 // Child components.
 import LeafList from "../components/LeafList";
 
-export default function Home()
-{
-
+export default function Home() {
   // ** It would be nice to move some of this into a separate components:
   // ** - NewLeafForm
   // ** - SearchBar
+  // ** - LeafList
+  
+
   // ** - LeafList √
 
   // Set the form data initial state.
+
   const [formData, setFormData] = useState({
     ownerUsername: "",
     title: "",
@@ -97,7 +100,6 @@ export default function Home()
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="1" style={{ marginBottom: "70px" }}>
             <Accordion.Header>Grow New Leaf</Accordion.Header>
-
             <Accordion.Body>
               <Form>
                 <Form.Group className="mb-3" controlId="formTitle">
