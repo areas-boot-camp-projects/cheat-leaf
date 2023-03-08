@@ -17,7 +17,7 @@ export default function LeafList({ refetch }) {
 	// If leafs don't exist, return an empty array.
 	const leafs = data?.leafs || []
 
-	console.log()
+	console.log(data) // **
 
   // const leafs = [
   //   {
@@ -99,6 +99,8 @@ export default function LeafList({ refetch }) {
 							Delete
 						</button>
 					</div>
+					
+					{console.log(leaf)}
 
 				</div>
 			))}

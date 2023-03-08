@@ -6,10 +6,11 @@ import { deleteTokenFromLocalStorage, getTokenFromLocalStorage, decodeToken } fr
 
 export default class Navigation extends Component {
   render() {
-    const token = getTokenFromLocalStorage();
-    const decodedToken = decodeToken(token);
-    const username = decodedToken ? decodedToken.data.username : 'Login';
-      console.log(token);
+    let token = getTokenFromLocalStorage();
+    let username = 'Login';
+    if (token) {
+      username = decodeToken(token).data.username
+    }
     return (
       <Navbar className="nav-color" expand="lg">
         <Container fluid>
