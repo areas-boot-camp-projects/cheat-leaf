@@ -8,15 +8,15 @@ import { Form } from "react-bootstrap";
 import backgroundImage from "../media/forestimg.jpg";
 
 // API and authentication.
-import { useMutation } from "@apollo/client"
+import { useMutation, useQuery } from "@apollo/client"
 import { ADD_LEAF } from "../gql/mutations"
+import { QUERY_LEAFS } from "../gql/queries"
 import { getTokenFromLocalStorage, decodeToken } from "../helpers/auth"
 
 // Child components.
 import LeafList from "../components/LeafList";
 
-export default function Home()
-{
+export default function Home() {
 
   // ** It would be nice to move some of this into a separate components:
   // ** - NewLeafForm
@@ -38,7 +38,12 @@ export default function Home()
   }
 
   // Set up the mutation.
-  const [addLeaf] = useMutation(ADD_LEAF)
+  const [addLeaf] = useMutation(ADD_LEAF, {
+    refetchQueries: ["QUERY_LEAFS"],
+  })
+
+  // Set up the query.
+  const { data, loading, error, refetch } = useQuery(QUERY_LEAFS)
 
   // Add a new leaf.
   async function submitFormData(e)
@@ -60,7 +65,8 @@ export default function Home()
       const { data } = await addLeaf({
         variables: { ...formData, ownerUsername: decodedToken.data.username },
       })
-      console.log(data) // **
+      // Refetch the leafs.
+      refetch()
     } catch (err)
     {
       console.log(err)
@@ -142,7 +148,7 @@ export default function Home()
         </Accordion>
       </div>
 
-      <LeafList />
+      <LeafList refetch={refetch} />
 
     </div>
   );
