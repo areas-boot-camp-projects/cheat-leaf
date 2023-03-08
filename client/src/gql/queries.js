@@ -17,3 +17,22 @@ export const QUERY_USERS = gql`
 		}
 	}
 `
+
+// Get leafs.
+export const QUERY_LEAFS = gql`
+	query Leafs {
+		leafs {
+			_id
+			title
+			content
+			createdAtFormatted
+			updatedAtFormatted
+			owner {
+				_id
+				username
+				email
+				leafCount
+			}
+		}
+	}
+`

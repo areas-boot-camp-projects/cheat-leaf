@@ -122,7 +122,7 @@ const resolvers = {
 			const user = await User.findOne({ username: ownerUsername })
 			// Create the leaf.
 			const addedLeaf = await Leaf.create({
-				ownerId: user._id,
+				owner: user._id,
 				ownerUsername,
 				title,
 				content,
