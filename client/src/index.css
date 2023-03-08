@@ -49,11 +49,33 @@ code {
   box-shadow: 1.5px 2px #F4F1E6;
 }
 
+.accordion-button {
+  background-color: #7D6E45 !important; 
+  border-radius: 50px !important;
+  height: 35px;
+}
+
+.accordian-text {
+  color: white !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: white !important;
+}
+
 .aboutus-text {
   font-family: 'Gloock', sans-serif !important;
   font-size: 130px;
   text-shadow: 1.5px 2px #7D6E45;
   text-align: center;
+}
+
+.panel, .panel-group .panel-heading+.panel-collapse>.panel-body{
+  border: none;
 }
 
 .aboutus-content {

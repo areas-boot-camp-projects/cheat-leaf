@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import { Button } from "react-bootstrap";
 
 // UI.
-import { MDBBtn, MDBContainer, MDBCard, MDBCardBody, MDBInput, MDBCheckbox } from "mdb-react-ui-kit"
+import { MDBBtn, MDBContainer, MDBCard, MDBCardBody, MDBInput, MDBCheckbox,  MDBValidation, MDBValidationItem } from "mdb-react-ui-kit"
 import backgroundImage from "../media/forestimg.jpg"
 
 // API and authentication.
@@ -55,38 +55,47 @@ function SignUp() {
         <MDBCardBody className="p-5">
           <h2 className="fw-bold text-center mb-5">Sign Up</h2>
           
-          <MDBInput
-            wrapperClass="mb-2"
-            label="Username"
-            size="lg"
-            id="form1"
-            type="text"
-            name="username"
-            value={formData.username}
-            onChange={updateFormData}
-          />
-          
-          <MDBInput
-            wrapperClass="mb-2"
-            label="Email"
-            size="lg"
-            id="form2"
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={updateFormData}
-          />
-          
-          <MDBInput
-            wrapperClass="mb-2"
-            label="Password"
-            size="lg"
-            id="form3"
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={updateFormData}
-          />
+            <MDBValidationItem feedback='Please choose a username.' invalid>
+                <MDBInput
+                    wrapperClass="mb-4"
+                    placeholder="Username"
+                    size="lg"
+                    id="form1"
+                    type="text"
+                    name="username"
+                    value={formData.username}
+                    onChange={updateFormData}
+                    required
+                />
+            </MDBValidationItem>
+            
+            <MDBValidationItem>
+                <MDBInput
+                    wrapperClass="mb-4"
+                    placeholder="Email"
+                    size="lg"
+                    id="form2"
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={updateFormData}
+                    required
+                />
+            </MDBValidationItem>
+
+            <MDBValidationItem>
+                <MDBInput
+                    wrapperClass="mb-5"
+                    placeholder="Password"
+                    size="lg"
+                    id="form3"
+                    type="password"
+                    name="password"
+                    value={formData.password}
+                    onChange={updateFormData}
+                    required
+                />
+            </MDBValidationItem>
                     
           <div className="d-flex flex-row justify-content-center mb-4">
             <MDBCheckbox
