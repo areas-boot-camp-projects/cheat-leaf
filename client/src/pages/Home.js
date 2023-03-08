@@ -8,21 +8,26 @@ import { Form } from "react-bootstrap";
 import backgroundImage from "../media/forestimg.jpg";
 
 // API and authentication.
-import { useMutation } from "@apollo/client"
+import { useMutation, useQuery } from "@apollo/client"
 import { ADD_LEAF } from "../gql/mutations"
+import { QUERY_LEAFS } from "../gql/queries"
 import { getTokenFromLocalStorage, decodeToken } from "../helpers/auth"
+
 
 // Child components.
 import LeafList from "../components/LeafList";
 
 export default function Home() {
-  
   // ** It would be nice to move some of this into a separate components:
   // ** - NewLeafForm
   // ** - SearchBar
+  // ** - LeafList
+  
+
   // ** - LeafList √
 
   // Set the form data initial state.
+
   const [formData, setFormData] = useState({
     ownerUsername: "",
     title: "",
@@ -30,33 +35,44 @@ export default function Home() {
   })
 
   // Update the form data state.
-  function updateFormData(e) {
+  function updateFormData(e)
+  {
     const { name, value } = e.target
     setFormData({ ...formData, [name]: value })
   }
 
   // Set up the mutation.
-  const [addLeaf] = useMutation(ADD_LEAF)
+  const [addLeaf] = useMutation(ADD_LEAF, {
+    refetchQueries: ["QUERY_LEAFS"],
+  })
+
+  // Set up the query.
+  const { data, loading, error, refetch } = useQuery(QUERY_LEAFS)
 
   // Add a new leaf.
-  async function submitFormData(e) {
+  async function submitFormData(e)
+  {
     e.preventDefault()
     // Get the token.
     const token = getTokenFromLocalStorage()
     // If there’s no token, don’t submit the form.
-    if (!token) {
+    if (!token)
+    {
       console.log("Token not found.")
       return
     }
     // Else , decode the token.
     const decodedToken = decodeToken(token)
     // Call the API
-    try {
+    try
+    {
       const { data } = await addLeaf({
         variables: { ...formData, ownerUsername: decodedToken.data.username },
       })
-      console.log(data) // **
-    } catch (err) {
+      // Refetch the leafs.
+      refetch()
+    } catch (err)
+    {
       console.log(err)
     }
     // Clear the form data.
@@ -66,7 +82,7 @@ export default function Home() {
       content: "",
     })
   }
-    
+
   return (
     <div style={{
       display: "flex",
@@ -82,7 +98,7 @@ export default function Home() {
     }}>
 
       <h1 className="homepage-text text-center" xs="auto" style={{ marginTop: "50px", marginBottom: "50px", color: "#B5A478" }}>Explore the Forest</h1>
-      
+
       <div style={{ display: "flex", justifyContent: "center", marginBottom: "20px", }}>
         <input className="rounded-pill search-bar" type="text" placeholder="Search" style={{ width: "300px", color: "#d4cbb2" }} />
       </div>
@@ -91,7 +107,6 @@ export default function Home() {
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="1" style={{ marginBottom: "70px" }}>
             <Accordion.Header>Grow New Leaf</Accordion.Header>
-
             <Accordion.Body>
               <Form>
                 <Form.Group className="mb-3" controlId="formTitle">
@@ -135,8 +150,8 @@ export default function Home() {
           </Accordion.Item>
         </Accordion>
       </div>
-      
-      <LeafList />
+
+      <LeafList refetch={refetch} />
 
     </div>
   );

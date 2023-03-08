@@ -3,7 +3,6 @@ import {
   MDBFooter,
   MDBContainer,
   MDBIcon,
-  MDBBtn,
 } from 'mdb-react-ui-kit';
 import { Button } from 'react-bootstrap';
 
@@ -14,7 +13,7 @@ export default function App() {
         <section className='mb-1'>
           <Button
             rippleColor="dark"
-            color='link'
+            variant='link'
             floating
             size="lg"
             className='text-light m-1'
@@ -28,7 +27,7 @@ export default function App() {
 
           <Button
             rippleColor="dark"
-            color='link'
+            variant='link'
             floating
             size="lg"
             className='text-light m-1'
@@ -42,7 +41,7 @@ export default function App() {
 
           <Button
             rippleColor="dark"
-            color='link'
+            variant='link'
             floating
             size="lg"
             className='text-light m-1'
@@ -52,9 +51,9 @@ export default function App() {
             <MDBIcon fab className='fa-linkedin' />
           </Button>
 
-          <Button
+          <Button 
             rippleColor=""
-            color='link'
+            variant='link'
             floating
             size="lg"
             className='text-light m-1'

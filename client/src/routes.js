@@ -7,7 +7,7 @@ import { history } from './helpers/history';
  
 
 import HomePage from "./pages/Home"
-import LoginPage from "./pages/Login"
+import SigninPage from "./pages/Signin"
  
 function Routes() {
    return (
@@ -19,8 +19,8 @@ function Routes() {
                    component={HomePage}
                />
                <Route
-                   path="./pages/Login"
-                   component={LoginPage}
+                   path="./pages/Signin"
+                   component={SigninPage}
                />
                <Redirect to="/" />
            </Switch>
