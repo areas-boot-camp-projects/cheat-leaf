@@ -6,8 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 
-
-
 // Import the Apollo client.
 import {
   ApolloClient,
