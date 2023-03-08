@@ -1,5 +1,8 @@
 # Cheat Leaf
 ## Description
+
+Check out the deployed application here! ---> https://cheat-leaf.herokuapp.com/
+
 A clean, well-designed cheat-sheet, web platform that hosts data related to code blocks and other information. It’s an all-around good resource for finding unique data sets to help you get ahead.
 
 Imagine this: You're a student sitting in a crowded lecture hall, surrounded by the soft murmur of fellow students frantically scribbling notes. The professor's voice drones on and on, drowning out any hope of comprehending the subject matter. Frustrated and feeling like you're drowning in a sea of information, you turn to your phone and open up your favorite app. Suddenly, you find yourself in a lush digital forest, a community where ideas grow and thrive.
@@ -13,48 +16,44 @@ So, come and join us in the Forest of Ideas. It’s the kind of place that grows
 
 Users create “cheat leafs” they can share with others. They can organize their “cheat leafs” in “branches”. And they themselves are considered “trees.” All together, users come together into a community known as a “forest of ideas.” It’s the kind of place that grows on you.
 
-<!-- if appropriate, add a screenshot ![image-alt](image-url) -->
+# Preview
+
+![Front Page of Website](./images/cheat-leaf-home.png)
 
 ![GNU GPLv3 License Badge](https://img.shields.io/github/license/areas-boot-camp-projects/cheat-leaf)
 
 
 ## Table of Contents
 - [Features](#features)
-- [Installation](#installation)
 - [Usage](#usage)
-- [Contribute](#contribute)
-- [Tests](#tests)
+- [About](#about)
 - [Credits](#credits)
 - [License](#license)
 - [Questions](#questions)
 
 
 ## Features
-TBD
 
-
-## Installation
-TBD
-
+Cheat Leaf is a cool hub for posting and hosting all of your various data and utilities to get your work done faster! Need some help figuring out some code? Search our Cheat Leaf forest of information for the leaf that helps you the most!
 
 ## Usage
-TBD
+
+Our forest is open to everyone who wants to share their ideas and connect with like-minded individuals. Whether you're a student, a professional, an entrepreneur, or just someone who wants to express themselves, our website welcomes you.
 
 
-## Contribute
-TBD
+## About
 
+Why choose Cheat Leaf?
 
-## Tests
-TBD
+Our website offers a user-friendly interface that makes it easy to create and publish your content. We also provide a range of tools and resources to help you optimize your content for search engines, and find what you need fast! Some information on Cheat Leaf might not be found anywhere else. This is what makes Cheat Leaf unique!
 
 
 ## Credits
-- Michael Virga
-- Dominic Paulazzo [wevexOP](https://github.com/wevexOP)
-- Troy Miller [R0x0s](https://github.com/R0x0s)
-- James Inanoria [jxmesin](https://github.com/jxmesin)
-- Kait Heinle [kait-kat](https://github.com/kait-kat)
+- Michael Virga ([studiomav](https://github.com/studiomav))
+- Dominic Paulazzo ([wevexOP](https://github.com/wevexOP))
+- Troy Miller ([R0x0s](https://github.com/R0x0s))
+- James Inanoria ([jxmesin](https://github.com/jxmesin))
+- Kait Heinle ([kait-kat](https://github.com/kait-kat))
 - Christian Areas ([christianareas](https://github.com/christianareas))
 
 
