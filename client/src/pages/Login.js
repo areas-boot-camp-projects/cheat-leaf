@@ -1,9 +1,9 @@
 // React.
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-
+ 
 // UI.
-import {MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBIcon, MDBCheckbox, MDBValidation, MDBValidationItem} from "mdb-react-ui-kit"
+import {MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBCheckbox, MDBValidation, MDBValidationItem} from "mdb-react-ui-kit"
 import backgroundImage from "../media/forestimg.jpg"
 
 // API and authentication.
