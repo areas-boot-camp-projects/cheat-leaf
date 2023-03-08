@@ -31,8 +31,8 @@ export default class Navigation extends Component {
                     <Nav.Link as={Link} to={"/About"} style={{color: '#F8F8F8', fontSize: '100%'}}>About</Nav.Link>
                   </Nav>
                  
-                  <NavDropdown align='end' title="Login" id="navbarScrollingDropdown" flip>
-                      <NavDropdown.Item as={Link} to={"/Login"} >Login</NavDropdown.Item>
+                  <NavDropdown align='end' title="Sign In" id="navbarScrollingDropdown" flip>
+                      <NavDropdown.Item as={Link} to={"/Signin"} >Sign In</NavDropdown.Item>
                       <NavDropdown.Item as={Link} to={"/SignUp"}>
                         Sign Up
                       </NavDropdown.Item>
