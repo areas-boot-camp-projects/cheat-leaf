@@ -99,7 +99,7 @@ export default function Home() {
       <div id="newLeaf">
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="1" style={{ marginBottom: "70px" }}>
-            <Accordion.Header>Grow New Leaf</Accordion.Header>
+            <Accordion.Header>Sprout a New Leaf</Accordion.Header>
             <Accordion.Body>
               <Form>
                 <Form.Group className="mb-3" controlId="formTitle">
