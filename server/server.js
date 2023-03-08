@@ -17,6 +17,7 @@ const server = new ApolloServer({
 // Middleware.
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("../client/build"))
 
 // Set up the server.
 const startApolloServer = async (typeDefs, resolvers) => {
