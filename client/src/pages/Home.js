@@ -22,9 +22,8 @@ export default function Home() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          backgroundPosition: 'static',
+          backgroundPosition: 'center',
           backgroundImage: "url(" + backgroundImage + ")",
-          backgroundPosition: "center",
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'fit',
           minHeight: '100vh',
@@ -35,10 +34,10 @@ export default function Home() {
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px', }}>
         <input className="rounded-pill search-bar" type="text" placeholder="Search" style={{ width: '300px', color: '#d4cbb2' }} />
       </div> 
-      <div id='newLeaf'>
-        <Accordion defaultActiveKey="0">
+      <div className="rounded-pill "id='newLeaf' style={{borderRadius: '10px'}} >
+        <Accordion className="rounded-pill" defaultActiveKey="0" style={{borderRadius: '10px'}} >
           <Accordion.Item eventKey="1" style={{marginBottom: '70px'}}>
-            <Accordion.Header>Grow New Leaf</Accordion.Header>
+            <Accordion.Header className='accordian-text'>Grow New Leaf</Accordion.Header>
             <Accordion.Body>
               <Form>
                 <Form.Group className="mb-3" controlId="formTitle">

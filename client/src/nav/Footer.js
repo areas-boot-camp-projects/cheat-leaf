@@ -53,7 +53,7 @@ export default function App() {
           </Button>
 
           <Button
-            rippleColor="dark"
+            rippleColor=""
             color='link'
             floating
             size="lg"
