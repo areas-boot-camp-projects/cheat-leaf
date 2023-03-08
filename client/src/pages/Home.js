@@ -15,8 +15,9 @@ import { getTokenFromLocalStorage, decodeToken } from "../helpers/auth"
 // Child components.
 import LeafList from "../components/LeafList";
 
-export default function Home() {
-  
+export default function Home()
+{
+
   // ** It would be nice to move some of this into a separate components:
   // ** - NewLeafForm
   // ** - SearchBar
@@ -30,7 +31,8 @@ export default function Home() {
   })
 
   // Update the form data state.
-  function updateFormData(e) {
+  function updateFormData(e)
+  {
     const { name, value } = e.target
     setFormData({ ...formData, [name]: value })
   }
@@ -39,24 +41,28 @@ export default function Home() {
   const [addLeaf] = useMutation(ADD_LEAF)
 
   // Add a new leaf.
-  async function submitFormData(e) {
+  async function submitFormData(e)
+  {
     e.preventDefault()
     // Get the token.
     const token = getTokenFromLocalStorage()
     // If there’s no token, don’t submit the form.
-    if (!token) {
+    if (!token)
+    {
       console.log("Token not found.")
       return
     }
     // Else , decode the token.
     const decodedToken = decodeToken(token)
     // Call the API
-    try {
+    try
+    {
       const { data } = await addLeaf({
         variables: { ...formData, ownerUsername: decodedToken.data.username },
       })
       console.log(data) // **
-    } catch (err) {
+    } catch (err)
+    {
       console.log(err)
     }
     // Clear the form data.
@@ -66,7 +72,7 @@ export default function Home() {
       content: "",
     })
   }
-    
+
   return (
     <div style={{
       display: "flex",
@@ -82,7 +88,7 @@ export default function Home() {
     }}>
 
       <h1 className="homepage-text text-center" xs="auto" style={{ marginTop: "50px", marginBottom: "50px", color: "#B5A478" }}>Explore the Forest</h1>
-      
+
       <div style={{ display: "flex", justifyContent: "center", marginBottom: "20px", }}>
         <input className="rounded-pill search-bar" type="text" placeholder="Search" style={{ width: "300px", color: "#d4cbb2" }} />
       </div>
@@ -135,7 +141,7 @@ export default function Home() {
           </Accordion.Item>
         </Accordion>
       </div>
-      
+
       <LeafList />
 
     </div>
