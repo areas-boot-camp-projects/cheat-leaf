@@ -15,19 +15,14 @@ import { getTokenFromLocalStorage, decodeToken } from "../helpers/auth"
 
 
 // Child components.
+import SearchBar from "../components/SearchBar";
 import LeafList from "../components/LeafList";
 
 export default function Home() {
-  // ** It would be nice to move some of this into a separate components:
-  // ** - NewLeafForm
-  // ** - SearchBar
-  // ** - LeafList
-  
-
-  // ** - LeafList √
+  // ** Todo: Move NewLeafForm to its own component.
+  // ** Warning: This component is sending a refetch to LeafList. If we move this to its own component, we’ll need to figure out how to pass the refetch to LeafList from NewLeafForm.
 
   // Set the form data initial state.
-
   const [formData, setFormData] = useState({
     ownerUsername: "",
     title: "",
@@ -99,9 +94,7 @@ export default function Home() {
 
       <h1 className="homepage-text text-center" xs="auto" style={{ marginTop: "50px", marginBottom: "50px", color: "#B5A478" }}>Explore the Forest</h1>
 
-      <div style={{ display: "flex", justifyContent: "center", marginBottom: "20px", }}>
-        <input className="rounded-pill search-bar" type="text" placeholder="Search" style={{ width: "300px", color: "#d4cbb2" }} />
-      </div>
+      <SearchBar />
 
       <div id="newLeaf">
         <Accordion defaultActiveKey="0">
