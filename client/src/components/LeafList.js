@@ -2,8 +2,8 @@
 import React from "react"
 
 // UI.
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 // API and authentication.
 import { useQuery } from "@apollo/client"
@@ -16,8 +16,6 @@ export default function LeafList({ refetch }) {
 
 	// If leafs don't exist, return an empty array.
 	const leafs = data?.leafs || []
-
-	console.log(data) // **
 
   // const leafs = [
   //   {

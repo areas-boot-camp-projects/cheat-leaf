@@ -136,7 +136,7 @@ export default function Home() {
                   type="submit"
                   onClick={submitFormData}
                 >
-                  Submit Leaf
+                  Sprout
                 </Button>
               </Form>
             </Accordion.Body>
