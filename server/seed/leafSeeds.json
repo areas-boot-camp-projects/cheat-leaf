@@ -1,0 +1,137 @@
+[
+	{
+		"ownerUsername": "kayla85",
+		"title": "JavaScript Functions",
+		"content": "JavaScript functions allow you to group statements together to perform a specific task. They can also take arguments, return values, and be stored in variables. #JavaScript #Functions #WebDevelopment"
+	},
+	{
+		"ownerUsername": "kayla85",
+		"title": "React Components",
+		"content": "React components are the building blocks of a React application. They allow you to split your UI into reusable pieces, and can also take inputs called props. #React #Components #FrontendDevelopment"
+	},
+	{
+		"ownerUsername": "kayla85",
+		"title": "MongoDB Querying",
+		"content": "MongoDB querying allows you to retrieve data from a MongoDB database. You can use a variety of operators and methods to filter, sort, and limit the results. #MongoDB #Querying #DatabaseDevelopment"
+	},
+	{
+		"ownerUsername": "jackson22",
+		"title": "JavaScript Variables",
+		"content": "JavaScript variables are used to store data values. You can declare them using the var, let, or const keyword. #JavaScript #Variables #WebDevelopment"
+	},
+	{
+		"ownerUsername": "jackson22",
+		"title": "React State",
+		"content": "React state allows you to store and manipulate component-specific data. You can update state using the setState method, and render UI based on its value. #React #State #FrontendDevelopment"
+	},
+	{
+		"ownerUsername": "jackson22",
+		"title": "MongoDB Indexing",
+		"content": "MongoDB indexing allows you to optimize query performance by creating indexes on fields used in queries. You can create indexes on single fields or on combinations of fields. #MongoDB #Indexing #DatabaseDevelopment"
+	},
+	{
+		"ownerUsername": "mariog",
+		"title": "Understanding MongoDB Queries",
+		"content": "MongoDB queries can be a bit tricky to understand at first, but once you get the hang of it, it's a powerful tool for querying data."
+	},
+	{
+		"ownerUsername": "mariog",
+		"title": "Getting Started with React",
+		"content": "React can be a bit overwhelming at first, but start with the basics and build from there. Don't be afraid to experiment and ask for help!"
+	},
+	{
+		"ownerUsername": "mariog",
+		"title": "Node.js Modules",
+		"content": "Node.js modules are a powerful way to organize your code and make it more modular. Learn how to create and use modules to make your code more maintainable."
+	},
+	{
+		"ownerUsername": "lila79",
+		"title": "Getting started with JavaScript",
+		"content": "JavaScript is a versatile programming language that can be used to build web applications, mobile apps, and even desktop applications. Start with the basics and practice often!"
+	},
+	{
+		"ownerUsername": "lila79",
+		"title": "GraphQL vs REST API",
+		"content": "GraphQL and REST API are two popular ways to build APIs. While REST API is simpler and easier to learn, GraphQL provides more flexibility and efficiency in certain use cases. Learn about the pros and cons of each to decide which one is best for your project."
+	},
+	{
+		"ownerUsername": "lila79",
+		"title": "Advanced MongoDB Queries",
+		"content": "MongoDB offers a variety of advanced querying techniques, such as aggregation pipelines and geospatial queries. Mastering these techniques can help you build more complex and powerful applications. Practice and experiment to become a MongoDB query expert!"
+	},
+	{
+		"ownerUsername": "daniellec",
+		"title": "5 Reasons to Use TypeScript",
+		"content": "TypeScript can help catch errors before they happen, provide better code intelligence, make code more readable, improve maintainability, and increase productivity."
+	},
+	{
+		"ownerUsername": "daniellec",
+		"title": "Getting Started with React Hooks",
+		"content": "React Hooks are a new way to use state and lifecycle methods in functional components. They make code simpler, more readable, and easier to test."
+	},
+	{
+		"ownerUsername": "daniellec",
+		"title": "Next.js: The Benefits of Server-Side Rendering",
+		"content": "Server-side rendering with Next.js can improve page load times, SEO, and user experience. It also allows for more efficient use of server resources."
+	},
+	{
+		"ownerUsername": "samj",
+		"title": "How to Use GraphQL in React",
+		"content": "Learn how to query data with GraphQL in your React app. With GraphQL, you can specify the data you need and retrieve it all in a single request."
+	},
+	{
+		"ownerUsername": "samj",
+		"title": "Using Next.js to Build Server-Side Rendered Apps",
+		"content": "Next.js makes it easy to build server-side rendered React apps. This can improve your app's SEO and performance, and provide a better user experience."
+	},
+	{
+		"ownerUsername": "samj",
+		"title": "Managing State in React with Redux",
+		"content": "Redux is a popular library for managing state in React apps. With Redux, you can keep your state organized, predictable, and easy to debug."
+	},
+	{
+		"ownerUsername": "adam34",
+		"title": "The Benefits of Using Docker",
+		"content": "Docker is a platform for developing, shipping, and running applications in containers. It can help streamline your development process, improve scalability, and reduce deployment time. #Docker #DevOps #Containerization"
+	},
+	{
+		"ownerUsername": "adam34",
+		"title": "React Native vs Flutter: Which is Better?",
+		"content": "React Native and Flutter are two popular frameworks for building cross-platform mobile apps. While both have their strengths and weaknesses, the choice ultimately depends on your specific needs and preferences. #ReactNative #Flutter #MobileDevelopment"
+	},
+	{
+		"ownerUsername": "adam34",
+		"title": "Introduction to AWS Lambda",
+		"content": "AWS Lambda is a serverless computing service that lets you run your code without provisioning or managing servers. With Lambda, you pay only for the compute time you consume, making it a cost-effective option for many applications. #AWS #Lambda #Serverless"
+	},
+	{
+		"ownerUsername": "sara18",
+		"title": "Creating a RESTful API with Node.js and Express",
+		"content": "Node.js and Express are a powerful combination for building RESTful APIs. With Express, you can easily create routes, handle requests, and send responses. #NodeJS #Express #APIDevelopment"
+	},
+	{
+		"ownerUsername": "sara18",
+		"title": "AWS S3: A Guide to Object Storage",
+		"content": "Amazon S3 is a cloud-based object storage service that offers durability, scalability, and security for your data. With S3, you can store and retrieve any amount of data, at any time, from anywhere on the web. #AWS #S3 #ObjectStorage"
+	},
+	{
+		"ownerUsername": "sara18",
+		"title": "Introduction to React Router",
+		"content": "React Router is a popular library for handling navigation in React applications. With React Router, you can create routes, render components based on the URL, and handle user interactions with ease. #React #ReactRouter #FrontendDevelopment"
+	},
+	{
+		"ownerUsername": "trevorl",
+		"title": "Building a Full-Stack Web App with MEAN Stack",
+		"content": "MEAN stack is a collection of JavaScript-based technologies that can be used to build full-stack web applications. It includes MongoDB, Express.js, AngularJS, and Node.js. #MEANStack #WebDevelopment #FullStack"
+	},
+	{
+		"ownerUsername": "trevorl",
+		"title": "A Guide to AWS Elastic Beanstalk",
+		"content": "AWS Elastic Beanstalk is a fully managed service that makes it easy to deploy and scale web applications. With Elastic Beanstalk, you can quickly deploy your code, manage your infrastructure, and monitor your application's performance. #AWS #ElasticBeanstalk #WebDevelopment"
+	},
+	{
+		"ownerUsername": "trevorl",
+		"title": "React vs Angular: Which One Should You Choose?",
+		"content": "React and Angular are two popular front-end frameworks for building web applications. While both have their strengths and weaknesses, the choice ultimately depends on your specific needs and preferences. #React #Angular #FrontendDevelopment"
+	}
+]
