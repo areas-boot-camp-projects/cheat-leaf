@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { Navbar, Nav, NavDropdown, Container, Form, Button } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import logo from '../media/cllogo2.png';
-import { deleteTokenFromLocalStorage, getTokenFromLocalStorage } from '../helpers/auth';
+import { deleteTokenFromLocalStorage, getTokenFromLocalStorage, decodeToken } from '../helpers/auth';
 
 export default class Navigation extends Component {
   render() {
-    const user = getTokenFromLocalStorage();
-    const username = user ? user.data.username : 'Login';
-      console.log(user);
+    const token = getTokenFromLocalStorage();
+    const decodedToken = decodeToken(token);
+    const username = decodedToken ? decodedToken.data.username : 'Login';
+      console.log(token);
     return (
       <Navbar className="nav-color" expand="lg">
         <Container fluid>
@@ -32,7 +33,7 @@ export default class Navigation extends Component {
               <Nav.Link as={Link} to={"/About"} style={{color: '#F8F8F8', fontSize: '100%'}}>About</Nav.Link>
             </Nav>
             <NavDropdown align='end' title={username} id="navbarScrollingDropdown" flip>
-              {user && (
+              {token && (
                 <>  
                 <Nav.Item>
                    <Nav.Link disabled><p>{username}</p></Nav.Link>
@@ -46,7 +47,7 @@ export default class Navigation extends Component {
                   </NavDropdown.Item>
                 </>
               )}
-              {!user && (
+              {!token && (
                 <>
                   <NavDropdown.Item as={Link} to={"/Signin"} >Signin</NavDropdown.Item>
                   <NavDropdown.Item as={Link} to={"/SignUp"}>

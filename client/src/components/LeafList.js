@@ -17,6 +17,8 @@ export default function LeafList({ refetch }) {
 	// If leafs don't exist, return an empty array.
 	const leafs = data?.leafs || []
 
+	console.log()
+
   // const leafs = [
   //   {
   //     id: 1,
