@@ -73,11 +73,13 @@ export default function LeafList({ refetch }) {
 						margin: "15px",
 					}}
 				>
-					<div style={{ marginRight: "10px" }}>
-						<FontAwesomeIcon icon={faArrowUp} style={{ color: "green" }} />
-						<p style={{ margin: "0", textAlign: "center" }}>{leaf.upvotes}</p>
-						<FontAwesomeIcon icon={faArrowDown} style={{ color: "red" }} />
-					</div>
+					{/* Maybe add this back later.
+						<div style={{ marginRight: "10px" }}>
+							<FontAwesomeIcon icon={faArrowUp} style={{ color: "green" }} />
+							<p style={{ margin: "0", textAlign: "center" }}>{leaf.upvotes}</p>
+							<FontAwesomeIcon icon={faArrowDown} style={{ color: "red" }} />
+						</div>
+					*/}
 
 					<div style={{ flex: "1" }}>
 						<h3 style={{ textAlign: "center" }}>
@@ -87,21 +89,21 @@ export default function LeafList({ refetch }) {
 							{leaf.content}
 						</p>
 						<p style={{ margin: "0" }}>
-							Posted by {leaf.username}USERNAME HERE at TIME HERE{leaf.time}
+							Sprouted from {leaf.owner.username} on {leaf.createdAtFormatted}
 						</p>
-						<button className="rounded mb-0" style={{ marginTop: "10px", marginRight: "10px" }}>
-							Comment
-						</button>
-						<button className="rounded mb-0" style={{ marginTop: "10px", marginRight: "10px" }}>
-							Edit
-						</button>
-						<button className="rounded mb-0" style={{ marginTop: "10px", marginRight: "10px" }}>
-							Delete
-						</button>
+						{/* Maybe add this back later.
+							<button className="rounded mb-0" style={{ marginTop: "10px", marginRight: "10px" }}>
+								Comment
+							</button>
+							<button className="rounded mb-0" style={{ marginTop: "10px", marginRight: "10px" }}>
+								Edit
+							</button>
+							<button className="rounded mb-0" style={{ marginTop: "10px", marginRight: "10px" }}>
+								Delete
+							</button>
+						*/}
 					</div>
 					
-					{console.log(leaf)}
-
 				</div>
 			))}
 		</div>
