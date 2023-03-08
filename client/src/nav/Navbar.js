@@ -48,7 +48,7 @@ export default class Navigation extends Component {
               )}
               {!user && (
                 <>
-                  <NavDropdown.Item as={Link} to={"/Login"} >Login</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to={"/Signin"} >Signin</NavDropdown.Item>
                   <NavDropdown.Item as={Link} to={"/SignUp"}>
                     Sign Up
                   </NavDropdown.Item>
