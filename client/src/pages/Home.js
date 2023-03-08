@@ -87,6 +87,7 @@ export default function Home() {
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
       backgroundSize: "fit",
+      backgroundAttachment: "fixed",
       minHeight: "100vh",
       minWidth: "100vw",
       padding: "10px"
