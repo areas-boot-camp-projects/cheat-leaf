@@ -14,9 +14,10 @@ export default function LeafList({ refetch }) {
 	// Query.
 	const { loading, data } = useQuery(QUERY_LEAFS)
 
-	// If there are no leaves, return an empty array.
+	// Save the leaaves (or an empty object if there’s nothing).
 	const leafs = data?.leafs || []
 
+	// JSX.
 	return (
 		<div style={{
 			display: "flex",

@@ -17,15 +17,16 @@ export default function SearchBar() {
 		variables: { searchTerm: searchTerm },
 	})
 
-	// If there are no leaves, return an empty array.
+	// Save the leaves (or an empty object if there’s nothing).
 	const leafs = data?.searchLeafs || []
 
+	// Submit the search term as the user types.
 	async function submitSearchTerm(e) {
 		setSearchTerm(e.target.value)
 		searchLeafs()
 	}
 
-
+	// Component.
 	return (
 		<div style={{ display: "flex", justifyContent: "center", marginBottom: "20px", }}>
 			
