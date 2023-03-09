@@ -38,7 +38,7 @@ export default function SearchBar() {
 			/>
 
 			<div style={{color: 'white'}}>
-				< container style={{backgroundColor: '#a69873'}}>
+				<container style={{backgroundColor: '#a69873'}}>
 					<ul>
 						{leafs.map(leaf => (
 							<li key={leaf._id}>
