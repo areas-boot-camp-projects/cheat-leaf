@@ -1,7 +1,7 @@
 import React from 'react';
-import Home from "./pages/Home";
+import Home from './pages/Home';
 import About from './pages/About';
-import Signin from "./pages/Signin";
+import Signin from './pages/Signin';
 import Signup from './pages/Signup';
 import MyProfile from './pages/MyProfile';
 import { Switch, Route } from 'react-router-dom';
