@@ -19,19 +19,19 @@ code {
   color: #F8F8F8;
 }
 
-.homepage-text {
+#mainText {
   font-family: 'Gloock', sans-serif !important;
-  font-size: 130px;
-  text-shadow: 1.5px 2px #7D6E45;
+  color: #f4f1e6;
+  text-shadow: 1px 2px 5px #2b2618;
 }
 
 .search-bar {
   width: 350px !important;
   text-align: center;
-  background-color: #7D6E45;
+  background-color: #a69873;
   border: none;
   height: 35px;
-  box-shadow: 1.5px 2px #F4F1E6;
+  box-shadow: 1.5px 2px #7D6E45;
 }
 
 ::placeholder {
@@ -39,19 +39,13 @@ code {
   font-family: 'Roboto', sans-serif !important;
 }
 
-.newleaf-bttn {
-  border: none;
-  background-color: #7D6E45;
-  font-family: 'Roboto', sans-serif !important;
-  color: white;
-  height: 30px;
-  width: 180px;
-  box-shadow: 1.5px 2px #F4F1E6;
+#newLeafHeader {
+  
 }
 
 .accordion-button {
-  background-color: #7D6E45 !important; 
-  border-radius: 50px !important;
+  background-color: #a69873 !important; 
+  box-shadow: 1.5px 2px #7D6E45;
   height: 35px;
 }
 
