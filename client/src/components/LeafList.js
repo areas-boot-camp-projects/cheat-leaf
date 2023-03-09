@@ -1,5 +1,6 @@
 // React.
 import React from "react"
+import { Link } from "react-router-dom"	
 
 // UI.
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -54,7 +55,9 @@ export default function LeafList({ refetch }) {
 
 					<div style={{ flex: "1" }}>
 						<h3 style={{ textAlign: "center" }}>
-							{leaf.title}
+							<Link to={`leaf/${leaf._id}`}>
+								{leaf.title}
+							</Link>
 						</h3>
 						<p>
 							{leaf.content}
