@@ -4,6 +4,7 @@ import About from './pages/About';
 import Signin from './pages/Signin';
 import Signup from './pages/Signup';
 import MyProfile from './pages/MyProfile';
+import Leaf from './pages/Leaf';
 import { Switch, Route } from 'react-router-dom';
 
 const Main = () => {
@@ -14,6 +15,7 @@ const Main = () => {
       <Route exact path='/Signup' component={Signup}></Route>
       <Route exact path='/About' component={About}></Route>
       <Route exact path='/MyProfile' component={MyProfile}></Route>
+      <Route exact path='/leaf/:leafId' component={Leaf}></Route>
     </Switch>
   
   );

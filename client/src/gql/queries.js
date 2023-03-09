@@ -38,15 +38,22 @@ export const QUERY_LEAFS = gql`
 `
 
 // Get a leaf.
-export const GET_LEAF_POST = gql`
-  query GetLeafPost($id: ID!) {
-    leafPost(id: $id) {
-      title
-      content
-      author
-      date
-    }
-  }
+export const QUERY_LEAF = gql`
+	query Leaf($leafId: ID!) {
+		leaf(leafId: $leafId) {
+			_id
+			title
+			content
+			createdAtFormatted
+			updatedAtFormatted
+			owner {
+				_id
+				username
+				email
+				leafCount
+			}
+		}
+	}
 `
 
 // Search leafs.
