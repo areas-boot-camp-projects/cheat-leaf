@@ -97,54 +97,56 @@ export default function Home() {
 
       <SearchBar />
 
-      <div id="newLeaf">
-        <Accordion defaultActiveKey="0">
-          <Accordion.Item eventKey="1" style={{ marginBottom: "70px" }}>
-            <Accordion.Header className="accordian-button">Grow New Leaf</Accordion.Header>
-            <Accordion.Body className="accordian-body">
-            <Accordion.Header id="newLeafHeader">Sprout a New Leaf</Accordion.Header>
-              <Form>
-                <Form.Group className="mb-3" controlId="formTitle">
-                  <Form.Label>Leaf Title</Form.Label>
+      {getTokenFromLocalStorage() && (
+        <div id="newLeaf">
+          <Accordion defaultActiveKey="0">
+            <Accordion.Item eventKey="1" style={{ marginBottom: "70px" }}>
+              <Accordion.Header className="accordian-button">Grow New Leaf</Accordion.Header>
+              <Accordion.Body className="accordian-body">
+              <Accordion.Header id="newLeafHeader">Sprout a New Leaf</Accordion.Header>
+                <Form>
+                  <Form.Group className="mb-3" controlId="formTitle">
+                    <Form.Label>Leaf Title</Form.Label>
 
-                  <Form.Control
-                    type="text"
-                    placeholder="Something inspiring"
-                    name="title"
-                    value={formData.title}
-                    onChange={updateFormData}
-                  />
+                    <Form.Control
+                      type="text"
+                      placeholder="Something inspiring"
+                      name="title"
+                      value={formData.title}
+                      onChange={updateFormData}
+                    />
 
-                  <Form.Text className="text-muted">
-                    The title should accurately reflect what your leaf is about, but within 256 characters.
-                  </Form.Text>
-                </Form.Group>
+                    <Form.Text className="text-muted">
+                      The title should accurately reflect what your leaf is about, but within 256 characters.
+                    </Form.Text>
+                  </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formContent">
-                  <Form.Label>Leaf Content</Form.Label>
+                  <Form.Group className="mb-3" controlId="formContent">
+                    <Form.Label>Leaf Content</Form.Label>
 
-                  <Form.Control
-                    as="textarea"
-                    placeholder="The good stuff"
-                    name="content"
-                    value={formData.content}
-                    onChange={updateFormData}
-                  />
+                    <Form.Control
+                      as="textarea"
+                      placeholder="Tell me more..."
+                      name="content"
+                      value={formData.content}
+                      onChange={updateFormData}
+                    />
 
-                </Form.Group>
-                <Button
-                  className="rounded-pill"
-                  variant="success"
-                  type="submit"
-                  onClick={submitFormData}
-                >
-                  Sprout
-                </Button>
-              </Form>
-            </Accordion.Body>
-          </Accordion.Item>
-        </Accordion>
-      </div>
+                  </Form.Group>
+                  <Button
+                    className="rounded-pill"
+                    variant="success"
+                    type="submit"
+                    onClick={submitFormData}
+                  >
+                    Sprout
+                  </Button>
+                </Form>
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+        </div>        
+      )}
 
       <LeafList refetch={refetch} />
 
