@@ -93,14 +93,14 @@ export default function Home() {
       padding: "10px"
     }}>
 
-      <h1 className="homepage-text text-center" xs="auto" style={{ marginTop: "50px", marginBottom: "50px", color: "#B5A478" }}>Explore the Forest</h1>
+      <h1 id="mainText" className="display-1 text-center" xs="auto" style={{ marginTop: "50px", marginBottom: "50px" }}>Explore the Forest</h1>
 
       <SearchBar />
 
       <div id="newLeaf">
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="1" style={{ marginBottom: "70px" }}>
-            <Accordion.Header>Sprout a New Leaf</Accordion.Header>
+            <Accordion.Header id="newLeafHeader">Sprout a New Leaf</Accordion.Header>
             <Accordion.Body>
               <Form>
                 <Form.Group className="mb-3" controlId="formTitle">
