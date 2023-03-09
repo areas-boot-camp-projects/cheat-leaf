@@ -79,17 +79,18 @@ export default function Home() {
 
   return (
     <div style={{
+      minHeight: "100vh",
+      minWidth: "100vw",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
       backgroundImage: "url(" + backgroundImage + ")",
-      backgroundPosition: "center",
+      backgroundPosition: "center center",
       backgroundRepeat: "no-repeat",
-      backgroundSize: "fit",
+      backgroundSize: "cover",
       backgroundAttachment: "fixed",
-      minHeight: "100vh",
-      minWidth: "100vw",
-      padding: "10px"
+      padding: "0",
+      margin: "auto",
     }}>
 
       <h1 id="mainText" className="display-1 text-center" xs="auto" style={{ marginTop: "120px", marginBottom: "50px" }}>Explore the Forest</h1>
