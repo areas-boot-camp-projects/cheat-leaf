@@ -1,5 +1,7 @@
 // React.
 import React, { useState } from "react"
+import { Link } from "react-router-dom"
+
 import { Navbar, Nav, NavDropdown, Container, Form, Button, Dropdown } from 'react-bootstrap';
 
 // API.
@@ -43,8 +45,11 @@ export default function SearchBar() {
 					<ul>
 						{leafs.map(leaf => (
 							<li key={leaf._id}>
-								<p>{leaf._id}</p>
-								<p>{leaf.title}</p>
+								<p>
+									<Link to={`leaf/${leaf._id}`}>
+										{leaf.title}
+									</Link>
+									</p>
 								<p>{leaf.content}</p>
 							</li>
 						))}

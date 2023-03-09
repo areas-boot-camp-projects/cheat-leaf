@@ -1,11 +1,11 @@
 // React.
-import React, { useState } from "react";
+import React, { useState } from "react"	
 
 // UI.
-import Button from "react-bootstrap/Button";
-import { Accordion } from "react-bootstrap";
-import { Form } from "react-bootstrap";
-import backgroundImage from "../media/forestimg.jpg";
+import Button from "react-bootstrap/Button"	
+import { Accordion } from "react-bootstrap"	
+import { Form } from "react-bootstrap"	
+import backgroundImage from "../media/forestimg.jpg"	
 
 // API and authentication.
 import { useMutation, useQuery } from "@apollo/client"
@@ -14,8 +14,8 @@ import { QUERY_LEAFS } from "../gql/queries"
 import { getTokenFromLocalStorage, decodeToken } from "../helpers/auth"
 
 // Child components.
-import SearchBar from "../components/SearchBar";
-import LeafList from "../components/LeafList";
+import SearchBar from "../components/SearchBar"	
+import LeafList from "../components/LeafList"	
 
 export default function Home() {
   // ** Todo: Move NewLeafForm to its own component.
@@ -149,5 +149,5 @@ export default function Home() {
       <LeafList refetch={refetch} />
 
     </div>
-  );
+  )	
 }
