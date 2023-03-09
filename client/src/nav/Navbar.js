@@ -30,8 +30,8 @@ export default class Navigation extends Component {
               style={{ maxHeight: '100px'}}
               navbarScroll
             >
-              <Nav.Link as={Link} to={"/"} style={{color: '#F8F8F8'}}>Home</Nav.Link>
-              <Nav.Link as={Link} to={"/About"} style={{color: '#F8F8F8', fontSize: '100%'}}>About</Nav.Link>
+              <Nav.Link as={Link} to={"/"} align='end' style={{color: '#F8F8F8'}}>Home</Nav.Link>
+              <Nav.Link as={Link} to={"/About"}align='end' style={{color: '#F8F8F8', fontSize: '100%'}}>About</Nav.Link>
             </Nav>
             <NavDropdown align='end' title={username} id="navbarScrollingDropdown" flip>
               {token && (

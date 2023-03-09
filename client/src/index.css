@@ -54,6 +54,9 @@ code {
   border-radius: 50px !important;
   height: 35px;
 }
+.accordian-body {
+  border-radius: 50px !important;
+}
 
 .accordian-text {
   color: white !important;
