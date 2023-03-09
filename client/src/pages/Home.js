@@ -13,7 +13,6 @@ import { ADD_LEAF } from "../gql/mutations"
 import { QUERY_LEAFS } from "../gql/queries"
 import { getTokenFromLocalStorage, decodeToken } from "../helpers/auth"
 
-
 // Child components.
 import SearchBar from "../components/SearchBar";
 import LeafList from "../components/LeafList";
@@ -87,20 +86,22 @@ export default function Home() {
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
       backgroundSize: "fit",
+      backgroundAttachment: "fixed",
       minHeight: "100vh",
       minWidth: "100vw",
       padding: "10px"
     }}>
 
-      <h1 className="homepage-text text-center" xs="auto" style={{ marginTop: "50px", marginBottom: "50px", color: "#B5A478" }}>Explore the Forest</h1>
+      <h1 id="mainText" className="display-1 text-center" xs="auto" style={{ marginTop: "120px", marginBottom: "50px" }}>Explore the Forest</h1>
 
       <SearchBar />
 
       <div id="newLeaf">
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="1" style={{ marginBottom: "70px" }}>
-            <Accordion.Header>Sprout a New Leaf</Accordion.Header>
-            <Accordion.Body>
+            <Accordion.Header className="accordian-button">Grow New Leaf</Accordion.Header>
+            <Accordion.Body className="accordian-body">
+            <Accordion.Header id="newLeafHeader">Sprout a New Leaf</Accordion.Header>
               <Form>
                 <Form.Group className="mb-3" controlId="formTitle">
                   <Form.Label>Leaf Title</Form.Label>
