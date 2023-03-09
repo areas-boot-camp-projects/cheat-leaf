@@ -12,6 +12,7 @@ if (token) {
 }
 
 
+
 export default function MyProfile() {
   const [profilePicture, setProfilePicture] = useState(null);
 
@@ -50,7 +51,7 @@ export default function MyProfile() {
               <div className="p-4 text-black" style={{ backgroundColor: '#f8f9fa' }}>
                  <div> 
                     <MDBBtn outline color="dark" style={{height: '36px', overflow: 'visible'}}>
-                    Edit profile
+                    in Production
                     </MDBBtn>
                   </div>
                 <div className="d-flex justify-content-end text-center py-1">
