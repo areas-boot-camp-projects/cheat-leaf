@@ -55,7 +55,10 @@ export default function LeafList({ refetch }) {
 
 					<div style={{ flex: "1" }}>
 						<h3 style={{ textAlign: "center" }}>
-							<Link to={`leaf/${leaf._id}`}>
+							<Link
+								style={{ color: "#87CEFA", textDecoration: "none" }}
+								to={`leaf/${leaf._id}`}
+							>
 								{leaf.title}
 							</Link>
 						</h3>
