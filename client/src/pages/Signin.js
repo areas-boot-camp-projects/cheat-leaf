@@ -1,9 +1,9 @@
 // React.
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
- 
+
 // UI.
-import {MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBCheckbox, MDBValidation, MDBValidationItem} from "mdb-react-ui-kit"
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput,  MDBCheckbox, MDBValidation, MDBValidationItem} from "mdb-react-ui-kit"
 import backgroundImage from "../media/forestimg.jpg"
 
 // API and authentication.
@@ -50,7 +50,7 @@ function SignIn() {
   return (
     <MDBValidation>
       
-      <MDBContainer fluid className="d-flex align-items-center justify-content-center bg-image min-vh-100" style={{backgroundImage: "url(" + backgroundImage + ")", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}>
+      <MDBContainer fluid className="d-flex align-items-center justify-content-center bg-image min-vh-100" style={{backgroundImage: "url(" + backgroundImage + ")", backgroundAttachment: "fixed", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}>
         <MDBRow className="d-flex justify-content-center align-items-center h-100">
           <MDBCol col="12">
 

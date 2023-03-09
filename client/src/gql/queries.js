@@ -36,3 +36,14 @@ export const QUERY_LEAFS = gql`
 		}
 	}
 `
+
+export const GET_LEAF_POST = gql`
+  query GetLeafPost($id: ID!) {
+    leafPost(id: $id) {
+      title
+      content
+      author
+      date
+    }
+  }
+`;
