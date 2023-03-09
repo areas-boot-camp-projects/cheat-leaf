@@ -44,6 +44,10 @@ const typeDefs = gql`
 		leaf(
 			leafId: ID!
 		): Leaf
+
+		searchLeafs(
+			searchTerm: String!
+		): [Leaf]
 	}
 
 	type Mutation {

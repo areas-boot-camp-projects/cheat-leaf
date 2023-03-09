@@ -33,6 +33,16 @@ const resolvers = {
 			// Get a leaf by its ID.
 			return await Leaf.findById(leafId).populate("owner")
 		},
+
+		searchLeafs: async (parent, { searchTerm }) => {
+			// Search for leaves by title or content.
+			return await Leaf.find({
+				$or: [
+					{ title: { $regex: searchTerm, $options: "i" } },
+					{ content: { $regex: searchTerm, $options: "i" } },
+				],
+			})
+		},
 	},
 
 	Mutation: {
