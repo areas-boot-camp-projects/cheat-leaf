@@ -1,10 +1,15 @@
 import React, { useState }from 'react';
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography } from 'mdb-react-ui-kit';
+import { deleteTokenFromLocalStorage, getTokenFromLocalStorage, decodeToken } from '../helpers/auth';
 
 import backgroundImage from '../media/forestimg.jpg';
 import pfp from '../media/daboy.jpg'
 
-
+let token = getTokenFromLocalStorage();
+    let username = 'Sign In';
+if (token) {
+  username = decodeToken(token).data.username
+}
 
 
 export default function MyProfile() {
@@ -38,7 +43,7 @@ export default function MyProfile() {
                   />
                  </div>
                 <div className="ms-3" style={{ marginTop: '130px' }}>
-                  <MDBTypography tag="h5">CEO of Mucinex</MDBTypography>
+                  <MDBTypography tag="h5">{username}</MDBTypography>
                   <MDBCardText>Your Body</MDBCardText>
                 </div>
               </div>
@@ -50,15 +55,15 @@ export default function MyProfile() {
                   </div>
                 <div className="d-flex justify-content-end text-center py-1">
                     <div>
-                    <MDBCardText className="mb-1 h5">253</MDBCardText>
+                    <MDBCardText className="mb-1 h5">3</MDBCardText>
                     <MDBCardText className="small text-muted mb-0">Leafs</MDBCardText>
                   </div>
                   <div className="px-3">
-                    <MDBCardText className="mb-1 h5">1026</MDBCardText>
+                    <MDBCardText className="mb-1 h5">1</MDBCardText>
                     <MDBCardText className="small text-muted mb-0">Followers</MDBCardText>
                   </div>
                   <div>
-                    <MDBCardText className="mb-1 h5">478</MDBCardText>
+                    <MDBCardText className="mb-1 h5">3</MDBCardText>
                     <MDBCardText className="small text-muted mb-0">Following</MDBCardText>
                   </div>
                 </div>
