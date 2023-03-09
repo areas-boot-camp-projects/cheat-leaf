@@ -7,7 +7,7 @@ import { deleteTokenFromLocalStorage, getTokenFromLocalStorage, decodeToken } fr
 export default class Navigation extends Component {
   render() {
     let token = getTokenFromLocalStorage();
-    let username = 'Login';
+    let username = 'Sign In';
     if (token) {
       username = decodeToken(token).data.username
     }
@@ -50,8 +50,8 @@ export default class Navigation extends Component {
               )}
               {!token && (
                 <>
-                  <NavDropdown.Item as={Link} to={"/Signin"} >Signin</NavDropdown.Item>
-                  <NavDropdown.Item as={Link} to={"/SignUp"}>
+                  <NavDropdown.Item as={Link} to={"/signin"} >Sign In</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to={"/signup"}>
                     Sign Up
                   </NavDropdown.Item>
                 </>
