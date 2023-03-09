@@ -1,4 +1,5 @@
 // Dependencies.
+const path = require("path")
 const express = require("express");
 const { ApolloServer } = require("apollo-server-express");
 
@@ -17,6 +18,9 @@ const server = new ApolloServer({
 // Middleware.
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(path.resolve(__dirname, "../client/build")))
+
+console.log(path.resolve(__dirname, "../client/build"))
 
 // Set up the server.
 const startApolloServer = async (typeDefs, resolvers) => {
