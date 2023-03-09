@@ -37,6 +37,7 @@ export const QUERY_LEAFS = gql`
 	}
 `
 
+// Get a leaf.
 export const GET_LEAF_POST = gql`
   query GetLeafPost($id: ID!) {
     leafPost(id: $id) {
@@ -46,4 +47,21 @@ export const GET_LEAF_POST = gql`
       date
     }
   }
-`;
+`
+
+// Search leafs.
+export const QUERY_SEARCH_LEAFS = gql`
+	query SearchLeafs($searchTerm: String!) {
+		searchLeafs(searchTerm: $searchTerm) {
+			_id
+			title
+			content
+			createdAtFormatted
+			updatedAtFormatted
+			owner {
+				_id
+			}
+			ownerUsername
+		}
+	}
+`

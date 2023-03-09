@@ -14,36 +14,8 @@ export default function LeafList({ refetch }) {
 	// Query.
 	const { loading, data } = useQuery(QUERY_LEAFS)
 
-	// If leafs don't exist, return an empty array.
+	// If there are no leaves, return an empty array.
 	const leafs = data?.leafs || []
-
-  // const leafs = [
-  //   {
-  //     id: 1,
-  //     title: "Get the “Create Post Button” working",
-  //     content: "Here we will pull data from the db when the users creates a new post! We will need to get the “Creat New Post” button working to query the data base and setup the website to allow the user to input data in text, image, code blocks and videos!"
-  //   },
-  //   {
-	// 		id: 2,
-	// 		title: "Add static background.",
-	// 		content: "I attempted to add a background to this homepage but either my pathing to the assets foler is incorrect in the inner css below. I think the image I added to assests with a gradient over it would look grear for a start."
-	// 	},
-  //   {
-	// 		id: 3,
-	// 		title: "Getting Login/Sign up Backend Working",
-	// 		content: "Setting up the login/sign up backend to register for the website."
-	// 	},
-  //   {
-	// 		id: 4,
-	// 		title: "Setup the “About” page",
-	// 		content: "We will still need to setup the about page. The “About” page should have the same static background as the home page."
-	// 	},
-  //   {
-	// 		id: 5,
-	// 		title: "TROY ADD THE FOOTER AND PROFILE PLZ",
-	// 		content: "Add the footer and my profile page to the project so our backend team can get those working with user input aas well."
-	// 	},
-  // ]
 
 	return (
 		<div style={{
@@ -58,7 +30,7 @@ export default function LeafList({ refetch }) {
 		}}>
 			{loading ? <div>Loading...</div> : leafs.map(leaf => (
 				<div
-					key={leaf.id}
+					key={leaf._id}
 					style={{
 						width: "80%",
 						boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)",
