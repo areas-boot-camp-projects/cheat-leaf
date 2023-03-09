@@ -30,7 +30,7 @@ export default function SearchBar() {
 
 	// Component.
 	return (
-		<div style={{ display: "flex", justifyContent: "center", marginBottom: "20px", }}>
+		<div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", marginBottom: "20px", }}>
 			
 			<input
 				className="rounded-pill search-bar"
@@ -40,17 +40,22 @@ export default function SearchBar() {
 				onChange={e => submitSearchTerm(e)}
 			/>
 
-			<div style={{color: 'white'}}>
-				<container style={{backgroundColor: '#a69873'}}>
-					<ul>
+			<div style={{ color: 'white', position: "absolute", marginTop: "40px" }}>
+				<container style={{ position: "relative" }}>
+					<ul style={{ backgroundColor: '#a69873', opacity: "95%", listStyle: "none", borderRadius: "5px", width: "75%", margin: "auto" }}>
 						{leafs.map(leaf => (
 							<li key={leaf._id}>
-								<p>
-									<Link to={`leaf/${leaf._id}`}>
+								<p style={{ margin: "0", padding: "10px 0 0 0" }}>
+									<Link
+										style={{ color: "#87CEFA", textDecoration: "none" }}
+										to={`leaf/${leaf._id}`}
+									>
 										{leaf.title}
 									</Link>
-									</p>
-								<p>{leaf.content}</p>
+								</p>
+								<p style={{ padding: "0" }}>
+									{leaf.content}
+								</p>
 							</li>
 						))}
 					</ul>
