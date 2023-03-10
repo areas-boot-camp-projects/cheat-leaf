@@ -23,8 +23,8 @@ function verifyToken({ req }) {
 		token = token.split("Bearer ")[1]
 		if (token) {
 			try {
-				const user = jwt.verify(token, secret)
-				return { user }
+				const { data } = jwt.verify(token, secret)
+				return { data }
 			} catch (err) {
 				throw new AuthenticationError("Token is invalid.")
 			}

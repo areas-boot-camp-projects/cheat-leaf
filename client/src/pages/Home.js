@@ -38,11 +38,6 @@ export default function Home() {
   // Set up the mutation.
   const [addLeaf] = useMutation(ADD_LEAF, {
     refetchQueries: ["QUERY_LEAFS"],
-    context: {
-      headers: {
-        Authorization: `Bearer ${getTokenFromLocalStorage()}`,
-      },
-    },
   })
 
   // Set up the query.

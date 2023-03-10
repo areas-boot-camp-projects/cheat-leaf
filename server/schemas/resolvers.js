@@ -127,10 +127,11 @@ const resolvers = {
 			return deletedUser			
 		},
 
-		addLeaf: async (parent, { ownerUsername, title, content, context }) => {
-			
-			console.log(context) // ** There’s something missing on the front end (this is returning undefined).
-
+		addLeaf: async (parent, { ownerUsername, title, content }, context) => {
+			// If ownerUsername doesn’t match the username from the verified token, return null. Else, continue.
+			if (ownerUsername !== context.data.username) {
+				return null
+			}
 			// Get the owner by their username.
 			const user = await User.findOne({ username: ownerUsername })
 			// Create the leaf.
