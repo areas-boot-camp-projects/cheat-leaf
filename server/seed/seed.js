@@ -2,8 +2,7 @@
 const db = require("../config/connection")
 
 // Models.
-const User = require("../models/user")
-const Leaf = require("../models/leaf")
+const { User, Leaf } = require("../models")
 
 // Data.
 const userSeeds = require("./userSeeds.json")
