@@ -1,6 +1,6 @@
 // Dependencies.
-const { signToken } = require("../utils/auth")
 const { AuthenticationError } = require("apollo-server-express")
+const { signToken } = require("../utils/auth")
 
 // Models.
 const { User, Leaf } = require("../models")
@@ -127,7 +127,10 @@ const resolvers = {
 			return deletedUser			
 		},
 
-		addLeaf: async (parent, { ownerUsername, title, content }) => {
+		addLeaf: async (parent, { ownerUsername, title, content, context }) => {
+			
+			console.log(context) // ** There’s something missing on the front end (this is returning undefined).
+
 			// Get the owner by their username.
 			const user = await User.findOne({ username: ownerUsername })
 			// Create the leaf.

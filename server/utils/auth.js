@@ -1,5 +1,6 @@
 // Dependencies.
 const jwt = require("jsonwebtoken")
+const { AuthenticationError } = require("apollo-server-express")
 require("dotenv").config()
 
 // Token secret and expiration.
@@ -13,6 +14,29 @@ function signToken({ _id, username, email }) {
 	)
 }
 
+// Verify a token.
+function verifyToken({ req }) {
+	// Get the token.
+	let token = req.headers.authorization || req.query.token || req.body.token
+	// If it’s an authorisation header, split the string to get the token.
+	if (req.headers.authorization) {
+		token = token.split("Bearer ")[1]
+		if (token) {
+			try {
+				const user = jwt.verify(token, secret)
+				return { user }
+			} catch (err) {
+				throw new AuthenticationError("Token is invalid.")
+			}
+		} else {
+			return { req }
+		}
+	} else {
+		return { req }
+	}
+}
+
 module.exports = {
 	signToken,
+	verifyToken,
 }
