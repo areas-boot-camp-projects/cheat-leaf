@@ -5,20 +5,35 @@ import Main from './Main';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+// Apollo dependencies.
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from "@apollo/client"
+import { setContext } from "@apollo/client/link/context"
 
-// Import the Apollo client.
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-} from "@apollo/client"
+// Create the httpLink.
+const httpLink = createHttpLink({
+  uri: "/graphql",
+})
+
+// Create the auth link.
+const authLink = setContext((_, { headers }) => {
+  // If there’s a token in local storage, add it to the request headers.
+  const token = localStorage.getItem("token")
+  // Return the headers to the context so httpLink can read them.
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : "",
+    },
+  }
+})
 
 // Create the Apollo client.
 const client = new ApolloClient({
-  uri: "/graphql",
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 })
 
+// App.
 function App() {
   return (
     <ApolloProvider client={client}> 

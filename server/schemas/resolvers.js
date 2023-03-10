@@ -1,6 +1,6 @@
 // Dependencies.
-const { signToken } = require("../utils/auth")
 const { AuthenticationError } = require("apollo-server-express")
+const { signToken } = require("../utils/auth")
 
 // Models.
 const { User, Leaf } = require("../models")
@@ -127,7 +127,11 @@ const resolvers = {
 			return deletedUser			
 		},
 
-		addLeaf: async (parent, { ownerUsername, title, content }) => {
+		addLeaf: async (parent, { ownerUsername, title, content }, context) => {
+			// If ownerUsername doesn’t match the username from the verified token, return null. Else, continue.
+			if (ownerUsername !== context.data.username) {
+				return null
+			}
 			// Get the owner by their username.
 			const user = await User.findOne({ username: ownerUsername })
 			// Create the leaf.
